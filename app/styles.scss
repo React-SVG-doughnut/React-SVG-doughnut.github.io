@@ -1,2 +1,11 @@
 @import "../node_modules/spice-sass/src/spice";
 @include normalise;
+@include googleFont('arvo',h1 h2 h3 h4 h5 h6,400);
+@include googleFont('open-sans',body textarea button);
+@include containerClass;
+
+body{
+    @include verticalRhythm;
+}
+
+@import "./components/intro/intro";
