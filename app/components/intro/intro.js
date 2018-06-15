@@ -1,5 +1,4 @@
 import React    from 'react';
-import ReactDOM from 'react-dom';
 import SvgDoughnut from 'react-svg-doughnut';
 
 class Intro extends React.Component {
@@ -8,7 +7,8 @@ class Intro extends React.Component {
 			<div className="intro">
 				<h1>React SVG Doughnut</h1>
                 <p>A flexible, lightweight React component for<br />SVG doughnut charts made easy!</p>
-                <SvgDoughnut percentage={100} label={'Awesome!'} settings={{
+                <SvgDoughnut percentage={100} settings={{
+					labelText: 'Awesome!',
 					size: 200,
 					thickness: 15,
 					pathColor: '#2980B9',

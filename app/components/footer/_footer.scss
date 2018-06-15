@@ -1,0 +1,20 @@
+.footer {
+    margin-top: 2rem;
+    background-color: darken($col-slate, 5%);
+    padding: 2rem 0;
+    color: $col-clouds;
+    @include clearFix;
+
+    p {
+        float: left;
+        margin: 0;
+    }
+
+    a {
+        float: right;
+        color: $col-clouds;
+        text-decoration: none;
+        font-family: inherit;
+        font-size: inherit;
+    }
+}

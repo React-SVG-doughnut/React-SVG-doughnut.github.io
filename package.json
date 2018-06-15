@@ -28,6 +28,6 @@
     "react-dom": "^16.2.0"
   },
   "dependencies": {
-    "react-svg-doughnut": "^0.3.1"
+    "react-svg-doughnut": "^1.1.0"
   }
 }

@@ -14,7 +14,8 @@ export const largeExample = `<code><span class="jsx__kwd">import</span> <span cl
     <span class="jsx__attr">render</span><span class="jsx__char">() {</span>
         <span class="jsx__attr">return</span><span class="jsx__char">(</span>
             <span class="jsx__char">&lt;</span><span class="jsx__kwd">div</span><span class="jsx__char">&gt</span>
-                <span class="jsx__char">&lt;</span><span class="jsx__kwd">SvgDoughnut</span> <span class="jsx__attr">percentage</span><span class="jsx__equ">=</span><span class="jsx__char">{</span><span class="jsx__int">100</span><span class="jsx__char">}</span> <span class="jsx__attr">label</span><span class="jsx__equ">=</span><span class="jsx__char">{</span><span class="jsx__str">'Awesome!'</span><span class="jsx__char">}</span> <span class="jsx__attr">settings</span><span class="jsx__equ">=</span><span class="jsx__char">{{</span>
+                <span class="jsx__char">&lt;</span><span class="jsx__kwd">SvgDoughnut</span> <span class="jsx__attr">percentage</span><span class="jsx__equ">=</span><span class="jsx__char">{</span><span class="jsx__int">100</span><span class="jsx__char">}</span> <span class="jsx__attr">settings</span><span class="jsx__equ">=</span><span class="jsx__char">{{</span>
+                    <span class="jsx__key">labelText</span><span class="jsx__colon">:</span> <span class="jsx__str">'Awesome!'</span><span class="jsx__char">,</span>
                     <span class="jsx__key">size</span><span class="jsx__colon">:</span> <span class="jsx__int">200</span><span class="jsx__char">,</span>
                     <span class="jsx__key">thickness</span><span class="jsx__colon">:</span> <span class="jsx__int">5</span><span class="jsx__char">,</span>
                     <span class="jsx__key">pathColor</span><span class="jsx__colon">:</span> <span class="jsx__str">'rgb(231, 83, 79)'</span><span class="jsx__char">,</span>

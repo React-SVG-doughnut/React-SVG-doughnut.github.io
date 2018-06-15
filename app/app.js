@@ -2,15 +2,15 @@ import React    from 'react';
 import ReactDOM from 'react-dom';
 import Intro from './components/intro/intro';
 import Installation from './components/installation/installation';
-import Examples from './components/examples/examples';
+import Footer from './components/footer/footer';
 
 class App extends React.Component {
 	render() {
 		return(
-			<div className="container">
+			<div>
                 <Intro />
 				<Installation />
-				<Examples />
+				<Footer />
 			</div>
 		);
 	}

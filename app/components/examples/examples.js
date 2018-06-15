@@ -1,10 +1,9 @@
-import React    from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 
 class Examples extends React.Component {
     render() {
         return (
-            <div className="installation">
+            <div className="examples">
                 <h3>Examples</h3>
             </div>
         );

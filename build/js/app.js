@@ -19,41 +19,53 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = require('react-dom');
+var _node_modulesReactSvgDoughnutPackageJson = require('../../../node_modules/react-svg-doughnut/package.json');
 
-var _reactDom2 = _interopRequireDefault(_reactDom);
+var _node_modulesReactSvgDoughnutPackageJson2 = _interopRequireDefault(_node_modulesReactSvgDoughnutPackageJson);
 
-var Examples = (function (_React$Component) {
-    _inherits(Examples, _React$Component);
+var GithubUrl = 'https://github.com/dannyoz/react-svg-doughnut';
 
-    function Examples() {
-        _classCallCheck(this, Examples);
+var Footer = (function (_React$Component) {
+    _inherits(Footer, _React$Component);
 
-        _get(Object.getPrototypeOf(Examples.prototype), 'constructor', this).apply(this, arguments);
+    function Footer() {
+        _classCallCheck(this, Footer);
+
+        _get(Object.getPrototypeOf(Footer.prototype), 'constructor', this).apply(this, arguments);
     }
 
-    _createClass(Examples, [{
+    _createClass(Footer, [{
         key: 'render',
         value: function render() {
             return _react2['default'].createElement(
                 'div',
-                { className: 'installation' },
+                { className: 'footer' },
                 _react2['default'].createElement(
-                    'h3',
-                    null,
-                    'Examples'
+                    'div',
+                    { className: 'container' },
+                    _react2['default'].createElement(
+                        'p',
+                        null,
+                        'v ',
+                        _node_modulesReactSvgDoughnutPackageJson2['default'].version
+                    ),
+                    _react2['default'].createElement(
+                        'a',
+                        { href: GithubUrl },
+                        'Github'
+                    )
                 )
             );
         }
     }]);
 
-    return Examples;
+    return Footer;
 })(_react2['default'].Component);
 
-exports['default'] = Examples;
+exports['default'] = Footer;
 module.exports = exports['default'];
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9jb21wb25lbnRzL2V4YW1wbGVzL2V4YW1wbGVzLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7cUJBQXFCLE9BQU87Ozs7d0JBQ1AsV0FBVzs7OztJQUUxQixRQUFRO2NBQVIsUUFBUTs7YUFBUixRQUFROzhCQUFSLFFBQVE7O21DQUFSLFFBQVE7OztpQkFBUixRQUFROztlQUNKLGtCQUFHO0FBQ0wsbUJBQ0k7O2tCQUFLLFNBQVMsRUFBQyxjQUFjO2dCQUN6Qjs7OztpQkFBaUI7YUFDZixDQUNSO1NBQ0w7OztXQVBDLFFBQVE7R0FBUyxtQkFBTSxTQUFTOztxQkFVdkIsUUFBUSIsImZpbGUiOiIvVXNlcnMvZGFuaWVsLm9zYm9ybmUvcmVwb3MvUmVhY3QtU1ZHLWRvdWdobnV0LmdpdGh1Yi5pby9hcHAvY29tcG9uZW50cy9leGFtcGxlcy9leGFtcGxlcy5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCAgICBmcm9tICdyZWFjdCc7XG5pbXBvcnQgUmVhY3RET00gZnJvbSAncmVhY3QtZG9tJztcblxuY2xhc3MgRXhhbXBsZXMgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xuICAgIHJlbmRlcigpIHtcbiAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaW5zdGFsbGF0aW9uXCI+XG4gICAgICAgICAgICAgICAgPGgzPkV4YW1wbGVzPC9oMz5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICApO1xuICAgIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgRXhhbXBsZXM7Il19
-},{"react":33,"react-dom":26}],2:[function(require,module,exports){
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9jb21wb25lbnRzL2Zvb3Rlci9mb290ZXIuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7OztxQkFBa0IsT0FBTzs7Ozt1REFDTCx1REFBdUQ7Ozs7QUFDM0UsSUFBTSxTQUFTLEdBQUcsK0NBQStDLENBQUM7O0lBRTVELE1BQU07Y0FBTixNQUFNOzthQUFOLE1BQU07OEJBQU4sTUFBTTs7bUNBQU4sTUFBTTs7O2lCQUFOLE1BQU07O2VBQ0Ysa0JBQUc7QUFDTCxtQkFDSTs7a0JBQUssU0FBUyxFQUFDLFFBQVE7Z0JBQ25COztzQkFBSyxTQUFTLEVBQUMsV0FBVztvQkFDdEI7Ozs7d0JBQU0scURBQVEsT0FBTztxQkFBSztvQkFDMUI7OzBCQUFHLElBQUksRUFBRSxTQUFTLEFBQUM7O3FCQUFXO2lCQUM1QjthQUNKLENBQ1I7U0FDTDs7O1dBVkMsTUFBTTtHQUFTLG1CQUFNLFNBQVM7O3FCQWFyQixNQUFNIiwiZmlsZSI6Ii9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9jb21wb25lbnRzL2Zvb3Rlci9mb290ZXIuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0IFBhY2thZ2UgZnJvbSAnLi4vLi4vLi4vbm9kZV9tb2R1bGVzL3JlYWN0LXN2Zy1kb3VnaG51dC9wYWNrYWdlLmpzb24nO1xuY29uc3QgR2l0aHViVXJsID0gJ2h0dHBzOi8vZ2l0aHViLmNvbS9kYW5ueW96L3JlYWN0LXN2Zy1kb3VnaG51dCc7XG5cbmNsYXNzIEZvb3RlciBleHRlbmRzIFJlYWN0LkNvbXBvbmVudCB7XG4gICAgcmVuZGVyKCkge1xuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmb290ZXJcIj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lclwiPlxuICAgICAgICAgICAgICAgICAgICA8cD52IHtQYWNrYWdlLnZlcnNpb259PC9wPlxuICAgICAgICAgICAgICAgICAgICA8YSBocmVmPXtHaXRodWJVcmx9PkdpdGh1YjwvYT5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICApO1xuICAgIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgRm9vdGVyO1xuIl19
+},{"../../../node_modules/react-svg-doughnut/package.json":27,"react":34}],2:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -62,9 +74,9 @@ Object.defineProperty(exports, "__esModule", {
 var smallExample = "<code><span class=\"jsx__char\">&lt;</span><span class=\"jsx__kwd\">SvgDoughnut</span> <span class=\"jsx__attr\">percentage</span><span class=\"jsx__equ\">=</span><span class=\"jsx__char\">{</span><span class=\"jsx__int\">100</span><span class=\"jsx__char\">}</span> <span class=\"jsx__attr\">label</span><span class=\"jsx__equ\">=</span><span class=\"jsx__char\">{</span><span class=\"jsx__str\">'Awesome!'</span><span class=\"jsx__char\">}</span> <span class=\"jsx__attr\">settings</span><span class=\"jsx__equ\">=</span><span class=\"jsx__char\">{{</span>\n    <span class=\"jsx__key\">size</span><span class=\"jsx__colon\">:</span> <span class=\"jsx__int\">200</span><span class=\"jsx__char\">,</span>\n    <span class=\"jsx__key\">thickness</span><span class=\"jsx__colon\">:</span> <span class=\"jsx__int\">5</span><span class=\"jsx__char\">,</span>\n    <span class=\"jsx__key\">pathColor</span><span class=\"jsx__colon\">:</span> <span class=\"jsx__str\">'rgb(231, 83, 79)'</span><span class=\"jsx__char\">,</span>\n    <span class=\"jsx__key\">circleColor</span><span class=\"jsx__colon\">:</span> <span class=\"jsx__str\">'rgba(0, 0, 0, 0.15)'</span><span class=\"jsx__char\">,</span>\n    <span class=\"jsx__key\">animationDuration</span><span class=\"jsx__colon\">:</span> <span class=\"jsx__int\">1000</span>\n<span class=\"jsx__char\">}}/&gt;</span></code>";
 
 exports.smallExample = smallExample;
-var largeExample = "<code><span class=\"jsx__kwd\">import</span> <span class=\"jsx__var\">React</span> <span class=\"jsx__kwd\">from</span> <span class=\"jsx__str\">'react'</span><span class=\"jsx__char\">;</span>\n<span class=\"jsx__kwd\">import</span> <span class=\"jsx__var\">ReactDOM</span> <span class=\"jsx__kwd\">from</span> <span class=\"jsx__str\">'react-dom'</span><span class=\"jsx__char\">;</span>\n<span class=\"jsx__kwd\">import</span> <span class=\"jsx__var\">SvgDoughnut</span> <span class=\"jsx__kwd\">from</span> <span class=\"jsx__str\">'react-svg-doughnut'</span><span class=\"jsx__char\">;</span>\n\n<span class=\"jsx__int\">class</span> <span class=\"jsx__attr\">Example</span> <span class=\"jsx__int\">extends</span> <span class=\"jsx__attr\">React</span><span class=\"jsx__char\">.</span><span class=\"jsx__attr\">Component</span> <span class=\"jsx__char\">{</span>\n    <span class=\"jsx__attr\">render</span><span class=\"jsx__char\">() {</span>\n        <span class=\"jsx__attr\">return</span><span class=\"jsx__char\">(</span>\n            <span class=\"jsx__char\">&lt;</span><span class=\"jsx__kwd\">div</span><span class=\"jsx__char\">&gt</span>\n                <span class=\"jsx__char\">&lt;</span><span class=\"jsx__kwd\">SvgDoughnut</span> <span class=\"jsx__attr\">percentage</span><span class=\"jsx__equ\">=</span><span class=\"jsx__char\">{</span><span class=\"jsx__int\">100</span><span class=\"jsx__char\">}</span> <span class=\"jsx__attr\">label</span><span class=\"jsx__equ\">=</span><span class=\"jsx__char\">{</span><span class=\"jsx__str\">'Awesome!'</span><span class=\"jsx__char\">}</span> <span class=\"jsx__attr\">settings</span><span class=\"jsx__equ\">=</span><span class=\"jsx__char\">{{</span>\n                    <span class=\"jsx__key\">size</span><span class=\"jsx__colon\">:</span> <span class=\"jsx__int\">200</span><span class=\"jsx__char\">,</span>\n                    <span class=\"jsx__key\">thickness</span><span class=\"jsx__colon\">:</span> <span class=\"jsx__int\">5</span><span class=\"jsx__char\">,</span>\n                    <span class=\"jsx__key\">pathColor</span><span class=\"jsx__colon\">:</span> <span class=\"jsx__str\">'rgb(231, 83, 79)'</span><span class=\"jsx__char\">,</span>\n                    <span class=\"jsx__key\">circleColor</span><span class=\"jsx__colon\">:</span> <span class=\"jsx__str\">'rgba(0, 0, 0, 0.15)'</span><span class=\"jsx__char\">,</span>\n                    <span class=\"jsx__key\">animationDuration</span><span class=\"jsx__colon\">:</span> <span class=\"jsx__int\">1000</span>\n                <span class=\"jsx__char\">}}/&gt;</span>\n            <span class=\"jsx__char\">&lt;/</span><span class=\"jsx__kwd\">div</span><span class=\"jsx__char\">&gt</span>\n        <span class=\"jsx__char\">);</span>\n    <span class=\"jsx__char\">}</span>\n<span class=\"jsx__char\">};</span>\n\n<span class=\"jsx__attr\">ReactDOM</span><span class=\"jsx__char\">.</span><span class=\"jsx__attr\">render</span><span class=\"jsx__char\">(</span>\n    <span class=\"jsx__char\">&lt;</span><span class=\"jsx__kwd\">Example</span> <span class=\"jsx__char\">/&gt,</span>\n    <span class=\"jsx__attr\">document</span><span class=\"jsx__char\">.</span><span class=\"jsx__attr\">getElementById</span><span class=\"jsx__char\">(</span><span class=\"jsx__str\">'app'</span><span class=\"jsx__char\">)</span>\n<span class=\"jsx__char\">);</span>\n</code>";
+var largeExample = "<code><span class=\"jsx__kwd\">import</span> <span class=\"jsx__var\">React</span> <span class=\"jsx__kwd\">from</span> <span class=\"jsx__str\">'react'</span><span class=\"jsx__char\">;</span>\n<span class=\"jsx__kwd\">import</span> <span class=\"jsx__var\">ReactDOM</span> <span class=\"jsx__kwd\">from</span> <span class=\"jsx__str\">'react-dom'</span><span class=\"jsx__char\">;</span>\n<span class=\"jsx__kwd\">import</span> <span class=\"jsx__var\">SvgDoughnut</span> <span class=\"jsx__kwd\">from</span> <span class=\"jsx__str\">'react-svg-doughnut'</span><span class=\"jsx__char\">;</span>\n\n<span class=\"jsx__int\">class</span> <span class=\"jsx__attr\">Example</span> <span class=\"jsx__int\">extends</span> <span class=\"jsx__attr\">React</span><span class=\"jsx__char\">.</span><span class=\"jsx__attr\">Component</span> <span class=\"jsx__char\">{</span>\n    <span class=\"jsx__attr\">render</span><span class=\"jsx__char\">() {</span>\n        <span class=\"jsx__attr\">return</span><span class=\"jsx__char\">(</span>\n            <span class=\"jsx__char\">&lt;</span><span class=\"jsx__kwd\">div</span><span class=\"jsx__char\">&gt</span>\n                <span class=\"jsx__char\">&lt;</span><span class=\"jsx__kwd\">SvgDoughnut</span> <span class=\"jsx__attr\">percentage</span><span class=\"jsx__equ\">=</span><span class=\"jsx__char\">{</span><span class=\"jsx__int\">100</span><span class=\"jsx__char\">}</span> <span class=\"jsx__attr\">settings</span><span class=\"jsx__equ\">=</span><span class=\"jsx__char\">{{</span>\n                    <span class=\"jsx__key\">labelText</span><span class=\"jsx__colon\">:</span> <span class=\"jsx__str\">'Awesome!'</span><span class=\"jsx__char\">,</span>\n                    <span class=\"jsx__key\">size</span><span class=\"jsx__colon\">:</span> <span class=\"jsx__int\">200</span><span class=\"jsx__char\">,</span>\n                    <span class=\"jsx__key\">thickness</span><span class=\"jsx__colon\">:</span> <span class=\"jsx__int\">5</span><span class=\"jsx__char\">,</span>\n                    <span class=\"jsx__key\">pathColor</span><span class=\"jsx__colon\">:</span> <span class=\"jsx__str\">'rgb(231, 83, 79)'</span><span class=\"jsx__char\">,</span>\n                    <span class=\"jsx__key\">circleColor</span><span class=\"jsx__colon\">:</span> <span class=\"jsx__str\">'rgba(0, 0, 0, 0.15)'</span><span class=\"jsx__char\">,</span>\n                    <span class=\"jsx__key\">animationDuration</span><span class=\"jsx__colon\">:</span> <span class=\"jsx__int\">1000</span>\n                <span class=\"jsx__char\">}}/&gt;</span>\n            <span class=\"jsx__char\">&lt;/</span><span class=\"jsx__kwd\">div</span><span class=\"jsx__char\">&gt</span>\n        <span class=\"jsx__char\">);</span>\n    <span class=\"jsx__char\">}</span>\n<span class=\"jsx__char\">};</span>\n\n<span class=\"jsx__attr\">ReactDOM</span><span class=\"jsx__char\">.</span><span class=\"jsx__attr\">render</span><span class=\"jsx__char\">(</span>\n    <span class=\"jsx__char\">&lt;</span><span class=\"jsx__kwd\">Example</span> <span class=\"jsx__char\">/&gt,</span>\n    <span class=\"jsx__attr\">document</span><span class=\"jsx__char\">.</span><span class=\"jsx__attr\">getElementById</span><span class=\"jsx__char\">(</span><span class=\"jsx__str\">'app'</span><span class=\"jsx__char\">)</span>\n<span class=\"jsx__char\">);</span>\n</code>";
 exports.largeExample = largeExample;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9jb21wb25lbnRzL2luc3RhbGxhdGlvbi9leGFtcGxlLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7O0FBQU8sSUFBTSxZQUFZLCsxQ0FNcUIsQ0FBQzs7O0FBRXhDLElBQU0sWUFBWSxxMkdBd0JqQixDQUFDIiwiZmlsZSI6Ii9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9jb21wb25lbnRzL2luc3RhbGxhdGlvbi9leGFtcGxlLmpzIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGNvbnN0IHNtYWxsRXhhbXBsZSA9IGA8Y29kZT48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPiZsdDs8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2t3ZFwiPlN2Z0RvdWdobnV0PC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9fYXR0clwiPnBlcmNlbnRhZ2U8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2VxdVwiPj08L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj57PC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19pbnRcIj4xMDA8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj59PC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9fYXR0clwiPmxhYmVsPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19lcXVcIj49PC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+ezwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fc3RyXCI+J0F3ZXNvbWUhJzwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPn08L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19hdHRyXCI+c2V0dGluZ3M8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2VxdVwiPj08L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj57ezwvc3Bhbj5cbiAgICA8c3BhbiBjbGFzcz1cImpzeF9fa2V5XCI+c2l6ZTwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY29sb25cIj46PC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9faW50XCI+MjAwPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+LDwvc3Bhbj5cbiAgICA8c3BhbiBjbGFzcz1cImpzeF9fa2V5XCI+dGhpY2tuZXNzPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jb2xvblwiPjo8L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19pbnRcIj41PC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+LDwvc3Bhbj5cbiAgICA8c3BhbiBjbGFzcz1cImpzeF9fa2V5XCI+cGF0aENvbG9yPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jb2xvblwiPjo8L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19zdHJcIj4ncmdiKDIzMSwgODMsIDc5KSc8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj4sPC9zcGFuPlxuICAgIDxzcGFuIGNsYXNzPVwianN4X19rZXlcIj5jaXJjbGVDb2xvcjwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY29sb25cIj46PC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9fc3RyXCI+J3JnYmEoMCwgMCwgMCwgMC4xNSknPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+LDwvc3Bhbj5cbiAgICA8c3BhbiBjbGFzcz1cImpzeF9fa2V5XCI+YW5pbWF0aW9uRHVyYXRpb248L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NvbG9uXCI+Ojwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX2ludFwiPjEwMDA8L3NwYW4+XG48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPn19LyZndDs8L3NwYW4+PC9jb2RlPmA7XG5cbmV4cG9ydCBjb25zdCBsYXJnZUV4YW1wbGUgPSBgPGNvZGU+PHNwYW4gY2xhc3M9XCJqc3hfX2t3ZFwiPmltcG9ydDwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX3ZhclwiPlJlYWN0PC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9fa3dkXCI+ZnJvbTwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX3N0clwiPidyZWFjdCc8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj47PC9zcGFuPlxuPHNwYW4gY2xhc3M9XCJqc3hfX2t3ZFwiPmltcG9ydDwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX3ZhclwiPlJlYWN0RE9NPC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9fa3dkXCI+ZnJvbTwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX3N0clwiPidyZWFjdC1kb20nPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+Ozwvc3Bhbj5cbjxzcGFuIGNsYXNzPVwianN4X19rd2RcIj5pbXBvcnQ8L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X192YXJcIj5TdmdEb3VnaG51dDwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX2t3ZFwiPmZyb208L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19zdHJcIj4ncmVhY3Qtc3ZnLWRvdWdobnV0Jzwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPjs8L3NwYW4+XG5cbjxzcGFuIGNsYXNzPVwianN4X19pbnRcIj5jbGFzczwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX2F0dHJcIj5FeGFtcGxlPC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9faW50XCI+ZXh0ZW5kczwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX2F0dHJcIj5SZWFjdDwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPi48L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2F0dHJcIj5Db21wb25lbnQ8L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+ezwvc3Bhbj5cbiAgICA8c3BhbiBjbGFzcz1cImpzeF9fYXR0clwiPnJlbmRlcjwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPigpIHs8L3NwYW4+XG4gICAgICAgIDxzcGFuIGNsYXNzPVwianN4X19hdHRyXCI+cmV0dXJuPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+KDwvc3Bhbj5cbiAgICAgICAgICAgIDxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+Jmx0Ozwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fa3dkXCI+ZGl2PC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+Jmd0PC9zcGFuPlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+Jmx0Ozwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fa3dkXCI+U3ZnRG91Z2hudXQ8L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19hdHRyXCI+cGVyY2VudGFnZTwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fZXF1XCI+PTwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPns8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2ludFwiPjEwMDwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPn08L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19hdHRyXCI+bGFiZWw8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2VxdVwiPj08L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj57PC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19zdHJcIj4nQXdlc29tZSEnPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+fTwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX2F0dHJcIj5zZXR0aW5nczwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fZXF1XCI+PTwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPnt7PC9zcGFuPlxuICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz1cImpzeF9fa2V5XCI+c2l6ZTwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY29sb25cIj46PC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9faW50XCI+MjAwPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+LDwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9XCJqc3hfX2tleVwiPnRoaWNrbmVzczwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY29sb25cIj46PC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9faW50XCI+NTwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPiw8L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPVwianN4X19rZXlcIj5wYXRoQ29sb3I8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NvbG9uXCI+Ojwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX3N0clwiPidyZ2IoMjMxLCA4MywgNzkpJzwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPiw8L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPVwianN4X19rZXlcIj5jaXJjbGVDb2xvcjwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY29sb25cIj46PC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9fc3RyXCI+J3JnYmEoMCwgMCwgMCwgMC4xNSknPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+LDwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9XCJqc3hfX2tleVwiPmFuaW1hdGlvbkR1cmF0aW9uPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jb2xvblwiPjo8L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19pbnRcIj4xMDAwPC9zcGFuPlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+fX0vJmd0Ozwvc3Bhbj5cbiAgICAgICAgICAgIDxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+Jmx0Oy88L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2t3ZFwiPmRpdjwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPiZndDwvc3Bhbj5cbiAgICAgICAgPHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj4pOzwvc3Bhbj5cbiAgICA8c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPn08L3NwYW4+XG48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPn07PC9zcGFuPlxuXG48c3BhbiBjbGFzcz1cImpzeF9fYXR0clwiPlJlYWN0RE9NPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+Ljwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fYXR0clwiPnJlbmRlcjwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPig8L3NwYW4+XG4gICAgPHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj4mbHQ7PC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19rd2RcIj5FeGFtcGxlPC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPi8mZ3QsPC9zcGFuPlxuICAgIDxzcGFuIGNsYXNzPVwianN4X19hdHRyXCI+ZG9jdW1lbnQ8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj4uPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19hdHRyXCI+Z2V0RWxlbWVudEJ5SWQ8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj4oPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19zdHJcIj4nYXBwJzwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPik8L3NwYW4+XG48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPik7PC9zcGFuPlxuPC9jb2RlPmA7XG4iXX0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9jb21wb25lbnRzL2luc3RhbGxhdGlvbi9leGFtcGxlLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7O0FBQU8sSUFBTSxZQUFZLCsxQ0FNcUIsQ0FBQzs7O0FBRXhDLElBQU0sWUFBWSw4MUdBeUJqQixDQUFDIiwiZmlsZSI6Ii9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9jb21wb25lbnRzL2luc3RhbGxhdGlvbi9leGFtcGxlLmpzIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGNvbnN0IHNtYWxsRXhhbXBsZSA9IGA8Y29kZT48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPiZsdDs8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2t3ZFwiPlN2Z0RvdWdobnV0PC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9fYXR0clwiPnBlcmNlbnRhZ2U8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2VxdVwiPj08L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj57PC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19pbnRcIj4xMDA8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj59PC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9fYXR0clwiPmxhYmVsPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19lcXVcIj49PC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+ezwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fc3RyXCI+J0F3ZXNvbWUhJzwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPn08L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19hdHRyXCI+c2V0dGluZ3M8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2VxdVwiPj08L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj57ezwvc3Bhbj5cbiAgICA8c3BhbiBjbGFzcz1cImpzeF9fa2V5XCI+c2l6ZTwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY29sb25cIj46PC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9faW50XCI+MjAwPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+LDwvc3Bhbj5cbiAgICA8c3BhbiBjbGFzcz1cImpzeF9fa2V5XCI+dGhpY2tuZXNzPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jb2xvblwiPjo8L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19pbnRcIj41PC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+LDwvc3Bhbj5cbiAgICA8c3BhbiBjbGFzcz1cImpzeF9fa2V5XCI+cGF0aENvbG9yPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jb2xvblwiPjo8L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19zdHJcIj4ncmdiKDIzMSwgODMsIDc5KSc8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj4sPC9zcGFuPlxuICAgIDxzcGFuIGNsYXNzPVwianN4X19rZXlcIj5jaXJjbGVDb2xvcjwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY29sb25cIj46PC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9fc3RyXCI+J3JnYmEoMCwgMCwgMCwgMC4xNSknPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+LDwvc3Bhbj5cbiAgICA8c3BhbiBjbGFzcz1cImpzeF9fa2V5XCI+YW5pbWF0aW9uRHVyYXRpb248L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NvbG9uXCI+Ojwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX2ludFwiPjEwMDA8L3NwYW4+XG48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPn19LyZndDs8L3NwYW4+PC9jb2RlPmA7XG5cbmV4cG9ydCBjb25zdCBsYXJnZUV4YW1wbGUgPSBgPGNvZGU+PHNwYW4gY2xhc3M9XCJqc3hfX2t3ZFwiPmltcG9ydDwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX3ZhclwiPlJlYWN0PC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9fa3dkXCI+ZnJvbTwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX3N0clwiPidyZWFjdCc8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj47PC9zcGFuPlxuPHNwYW4gY2xhc3M9XCJqc3hfX2t3ZFwiPmltcG9ydDwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX3ZhclwiPlJlYWN0RE9NPC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9fa3dkXCI+ZnJvbTwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX3N0clwiPidyZWFjdC1kb20nPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+Ozwvc3Bhbj5cbjxzcGFuIGNsYXNzPVwianN4X19rd2RcIj5pbXBvcnQ8L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X192YXJcIj5TdmdEb3VnaG51dDwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX2t3ZFwiPmZyb208L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19zdHJcIj4ncmVhY3Qtc3ZnLWRvdWdobnV0Jzwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPjs8L3NwYW4+XG5cbjxzcGFuIGNsYXNzPVwianN4X19pbnRcIj5jbGFzczwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX2F0dHJcIj5FeGFtcGxlPC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9faW50XCI+ZXh0ZW5kczwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX2F0dHJcIj5SZWFjdDwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPi48L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2F0dHJcIj5Db21wb25lbnQ8L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+ezwvc3Bhbj5cbiAgICA8c3BhbiBjbGFzcz1cImpzeF9fYXR0clwiPnJlbmRlcjwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPigpIHs8L3NwYW4+XG4gICAgICAgIDxzcGFuIGNsYXNzPVwianN4X19hdHRyXCI+cmV0dXJuPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+KDwvc3Bhbj5cbiAgICAgICAgICAgIDxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+Jmx0Ozwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fa3dkXCI+ZGl2PC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+Jmd0PC9zcGFuPlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+Jmx0Ozwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fa3dkXCI+U3ZnRG91Z2hudXQ8L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19hdHRyXCI+cGVyY2VudGFnZTwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fZXF1XCI+PTwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPns8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2ludFwiPjEwMDwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPn08L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19hdHRyXCI+c2V0dGluZ3M8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2VxdVwiPj08L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj57ezwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9XCJqc3hfX2tleVwiPmxhYmVsVGV4dDwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY29sb25cIj46PC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9fc3RyXCI+J0F3ZXNvbWUhJzwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPiw8L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPVwianN4X19rZXlcIj5zaXplPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jb2xvblwiPjo8L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19pbnRcIj4yMDA8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj4sPC9zcGFuPlxuICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz1cImpzeF9fa2V5XCI+dGhpY2tuZXNzPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jb2xvblwiPjo8L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19pbnRcIj41PC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+LDwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9XCJqc3hfX2tleVwiPnBhdGhDb2xvcjwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY29sb25cIj46PC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9fc3RyXCI+J3JnYigyMzEsIDgzLCA3OSknPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+LDwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9XCJqc3hfX2tleVwiPmNpcmNsZUNvbG9yPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jb2xvblwiPjo8L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19zdHJcIj4ncmdiYSgwLCAwLCAwLCAwLjE1KSc8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj4sPC9zcGFuPlxuICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz1cImpzeF9fa2V5XCI+YW5pbWF0aW9uRHVyYXRpb248L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NvbG9uXCI+Ojwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX2ludFwiPjEwMDA8L3NwYW4+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj59fS8mZ3Q7PC9zcGFuPlxuICAgICAgICAgICAgPHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj4mbHQ7Lzwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fa3dkXCI+ZGl2PC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+Jmd0PC9zcGFuPlxuICAgICAgICA8c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPik7PC9zcGFuPlxuICAgIDxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+fTwvc3Bhbj5cbjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+fTs8L3NwYW4+XG5cbjxzcGFuIGNsYXNzPVwianN4X19hdHRyXCI+UmVhY3RET008L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj4uPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19hdHRyXCI+cmVuZGVyPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+KDwvc3Bhbj5cbiAgICA8c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPiZsdDs8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2t3ZFwiPkV4YW1wbGU8L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+LyZndCw8L3NwYW4+XG4gICAgPHNwYW4gY2xhc3M9XCJqc3hfX2F0dHJcIj5kb2N1bWVudDwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPi48L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2F0dHJcIj5nZXRFbGVtZW50QnlJZDwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPig8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX3N0clwiPidhcHAnPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+KTwvc3Bhbj5cbjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+KTs8L3NwYW4+XG48L2NvZGU+YDtcbiJdfQ==
 },{}],3:[function(require,module,exports){
 'use strict';
 
@@ -86,10 +98,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = require('react-dom');
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
 var _example = require('./example');
 
 function createExampe() {
@@ -110,7 +118,7 @@ var Installation = (function (_React$Component) {
         value: function render() {
             return _react2['default'].createElement(
                 'div',
-                { className: 'installation' },
+                { className: 'installation container' },
                 _react2['default'].createElement(
                     'h3',
                     null,
@@ -133,7 +141,7 @@ var Installation = (function (_React$Component) {
                 _react2['default'].createElement(
                     'p',
                     null,
-                    'Usage:'
+                    'Example of basic Usage:'
                 ),
                 _react2['default'].createElement('pre', { className: 'jsx', dangerouslySetInnerHTML: createExampe() })
             );
@@ -145,8 +153,8 @@ var Installation = (function (_React$Component) {
 
 exports['default'] = Installation;
 module.exports = exports['default'];
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9jb21wb25lbnRzL2luc3RhbGxhdGlvbi9pbnN0YWxsYXRpb24uanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7OztxQkFBcUIsT0FBTzs7Ozt3QkFDUCxXQUFXOzs7O3VCQUNILFdBQVc7O0FBRXhDLFNBQVMsWUFBWSxHQUFHO0FBQ3BCLFdBQU8sRUFBQyxNQUFNLHVCQUFjLEVBQUMsQ0FBQztDQUNqQyxDQUFDOztJQUVJLFlBQVk7Y0FBWixZQUFZOzthQUFaLFlBQVk7OEJBQVosWUFBWTs7bUNBQVosWUFBWTs7O2lCQUFaLFlBQVk7O2VBQ1Isa0JBQUc7QUFDTCxtQkFDSTs7a0JBQUssU0FBUyxFQUFDLGNBQWM7Z0JBQ3pCOzs7O2lCQUFxQjtnQkFDckI7Ozs7aUJBQW9EO2dCQUNwRDs7c0JBQU0sU0FBUyxFQUFDLEtBQUs7b0JBQUM7OzBCQUFNLFNBQVMsRUFBQyxXQUFXOztxQkFBNkM7aUJBQU87Z0JBQ3JHOzs7O2lCQUFhO2dCQUNiLDBDQUFLLFNBQVMsRUFBQyxLQUFLLEVBQUMsdUJBQXVCLEVBQUUsWUFBWSxFQUFFLEFBQUMsR0FBRzthQUM5RCxDQUNSO1NBQ0w7OztXQVhDLFlBQVk7R0FBUyxtQkFBTSxTQUFTOztxQkFjM0IsWUFBWSIsImZpbGUiOiIvVXNlcnMvZGFuaWVsLm9zYm9ybmUvcmVwb3MvUmVhY3QtU1ZHLWRvdWdobnV0LmdpdGh1Yi5pby9hcHAvY29tcG9uZW50cy9pbnN0YWxsYXRpb24vaW5zdGFsbGF0aW9uLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0ICAgIGZyb20gJ3JlYWN0JztcbmltcG9ydCBSZWFjdERPTSBmcm9tICdyZWFjdC1kb20nO1xuaW1wb3J0IHsgbGFyZ2VFeGFtcGxlIH0gZnJvbSAnLi9leGFtcGxlJztcblxuZnVuY3Rpb24gY3JlYXRlRXhhbXBlKCkge1xuICAgIHJldHVybiB7X19odG1sOiBsYXJnZUV4YW1wbGV9O1xufTtcblxuY2xhc3MgSW5zdGFsbGF0aW9uIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcbiAgICByZW5kZXIoKSB7XG4gICAgICAgIHJldHVybiAoXG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImluc3RhbGxhdGlvblwiPlxuICAgICAgICAgICAgICAgIDxoMz5JbnN0YWxsYXRpb248L2gzPlxuICAgICAgICAgICAgICAgIDxwPlJlYWN0IFNWRyBkb3VnaG51dCBjYW4gYmUgZG93bmxvYWRlZCB2aWEgTlBNOjwvcD5cbiAgICAgICAgICAgICAgICA8Y29kZSBjbGFzc05hbWU9XCJqc3hcIj48c3BhbiBjbGFzc05hbWU9XCJqc3hfX2NoYXJcIj5ucG0gaW5zdGFsbCByZWFjdC1zdmctZG91Z2hudXQgLS1zYXZlPC9zcGFuPjwvY29kZT5cbiAgICAgICAgICAgICAgICA8cD5Vc2FnZTo8L3A+XG4gICAgICAgICAgICAgICAgPHByZSBjbGFzc05hbWU9XCJqc3hcIiBkYW5nZXJvdXNseVNldElubmVySFRNTD17Y3JlYXRlRXhhbXBlKCl9IC8+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgKTtcbiAgICB9XG59XG5cbmV4cG9ydCBkZWZhdWx0IEluc3RhbGxhdGlvbjtcbiJdfQ==
-},{"./example":2,"react":33,"react-dom":26}],4:[function(require,module,exports){
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9jb21wb25lbnRzL2luc3RhbGxhdGlvbi9pbnN0YWxsYXRpb24uanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7OztxQkFBcUIsT0FBTzs7Ozt1QkFDQyxXQUFXOztBQUV4QyxTQUFTLFlBQVksR0FBRztBQUNwQixXQUFPLEVBQUMsTUFBTSx1QkFBYyxFQUFDLENBQUM7Q0FDakMsQ0FBQzs7SUFFSSxZQUFZO2NBQVosWUFBWTs7YUFBWixZQUFZOzhCQUFaLFlBQVk7O21DQUFaLFlBQVk7OztpQkFBWixZQUFZOztlQUNSLGtCQUFHO0FBQ0wsbUJBQ0k7O2tCQUFLLFNBQVMsRUFBQyx3QkFBd0I7Z0JBQ25DOzs7O2lCQUFxQjtnQkFDckI7Ozs7aUJBQW9EO2dCQUNwRDs7c0JBQU0sU0FBUyxFQUFDLEtBQUs7b0JBQUM7OzBCQUFNLFNBQVMsRUFBQyxXQUFXOztxQkFBNkM7aUJBQU87Z0JBQ3JHOzs7O2lCQUE4QjtnQkFDOUIsMENBQUssU0FBUyxFQUFDLEtBQUssRUFBQyx1QkFBdUIsRUFBRSxZQUFZLEVBQUUsQUFBQyxHQUFHO2FBQzlELENBQ1I7U0FDTDs7O1dBWEMsWUFBWTtHQUFTLG1CQUFNLFNBQVM7O3FCQWMzQixZQUFZIiwiZmlsZSI6Ii9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9jb21wb25lbnRzL2luc3RhbGxhdGlvbi9pbnN0YWxsYXRpb24uanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgICAgZnJvbSAncmVhY3QnO1xuaW1wb3J0IHsgbGFyZ2VFeGFtcGxlIH0gZnJvbSAnLi9leGFtcGxlJztcblxuZnVuY3Rpb24gY3JlYXRlRXhhbXBlKCkge1xuICAgIHJldHVybiB7X19odG1sOiBsYXJnZUV4YW1wbGV9O1xufTtcblxuY2xhc3MgSW5zdGFsbGF0aW9uIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcbiAgICByZW5kZXIoKSB7XG4gICAgICAgIHJldHVybiAoXG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImluc3RhbGxhdGlvbiBjb250YWluZXJcIj5cbiAgICAgICAgICAgICAgICA8aDM+SW5zdGFsbGF0aW9uPC9oMz5cbiAgICAgICAgICAgICAgICA8cD5SZWFjdCBTVkcgZG91Z2hudXQgY2FuIGJlIGRvd25sb2FkZWQgdmlhIE5QTTo8L3A+XG4gICAgICAgICAgICAgICAgPGNvZGUgY2xhc3NOYW1lPVwianN4XCI+PHNwYW4gY2xhc3NOYW1lPVwianN4X19jaGFyXCI+bnBtIGluc3RhbGwgcmVhY3Qtc3ZnLWRvdWdobnV0IC0tc2F2ZTwvc3Bhbj48L2NvZGU+XG4gICAgICAgICAgICAgICAgPHA+RXhhbXBsZSBvZiBiYXNpYyBVc2FnZTo8L3A+XG4gICAgICAgICAgICAgICAgPHByZSBjbGFzc05hbWU9XCJqc3hcIiBkYW5nZXJvdXNseVNldElubmVySFRNTD17Y3JlYXRlRXhhbXBlKCl9IC8+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgKTtcbiAgICB9XG59XG5cbmV4cG9ydCBkZWZhdWx0IEluc3RhbGxhdGlvbjtcbiJdfQ==
+},{"./example":2,"react":34}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -166,10 +174,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== 'function' 
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = require('react-dom');
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _reactSvgDoughnut = require('react-svg-doughnut');
 
@@ -202,7 +206,8 @@ var Intro = (function (_React$Component) {
 					_react2['default'].createElement('br', null),
 					'SVG doughnut charts made easy!'
 				),
-				_react2['default'].createElement(_reactSvgDoughnut2['default'], { percentage: 100, label: 'Awesome!', settings: {
+				_react2['default'].createElement(_reactSvgDoughnut2['default'], { percentage: 100, settings: {
+						labelText: 'Awesome!',
 						size: 200,
 						thickness: 15,
 						pathColor: '#2980B9',
@@ -220,8 +225,8 @@ var Intro = (function (_React$Component) {
 
 exports['default'] = Intro;
 module.exports = exports['default'];
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9jb21wb25lbnRzL2ludHJvL2ludHJvLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7cUJBQXFCLE9BQU87Ozs7d0JBQ1AsV0FBVzs7OztnQ0FDUixvQkFBb0I7Ozs7SUFFdEMsS0FBSztXQUFMLEtBQUs7O1VBQUwsS0FBSzt3QkFBTCxLQUFLOzs2QkFBTCxLQUFLOzs7Y0FBTCxLQUFLOztTQUNKLGtCQUFHO0FBQ1IsVUFDQzs7TUFBSyxTQUFTLEVBQUMsT0FBTztJQUNyQjs7OztLQUEyQjtJQUNmOzs7O0tBQThDLDRDQUFNOztLQUFrQztJQUN0RixrRUFBYSxVQUFVLEVBQUUsR0FBRyxBQUFDLEVBQUMsS0FBSyxFQUFFLFVBQVUsQUFBQyxFQUFDLFFBQVEsRUFBRTtBQUN0RSxVQUFJLEVBQUUsR0FBRztBQUNULGVBQVMsRUFBRSxFQUFFO0FBQ2IsZUFBUyxFQUFFLFNBQVM7QUFDcEIsaUJBQVcsRUFBRSxxQkFBcUI7QUFDbEMsdUJBQWlCLEVBQUUsSUFBSTtNQUN2QixBQUFDLEdBQUU7SUFDQyxDQUNMO0dBQ0Y7OztRQWZJLEtBQUs7R0FBUyxtQkFBTSxTQUFTOztBQWdCbEMsQ0FBQzs7cUJBRWEsS0FBSyIsImZpbGUiOiIvVXNlcnMvZGFuaWVsLm9zYm9ybmUvcmVwb3MvUmVhY3QtU1ZHLWRvdWdobnV0LmdpdGh1Yi5pby9hcHAvY29tcG9uZW50cy9pbnRyby9pbnRyby5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCAgICBmcm9tICdyZWFjdCc7XG5pbXBvcnQgUmVhY3RET00gZnJvbSAncmVhY3QtZG9tJztcbmltcG9ydCBTdmdEb3VnaG51dCBmcm9tICdyZWFjdC1zdmctZG91Z2hudXQnO1xuXG5jbGFzcyBJbnRybyBleHRlbmRzIFJlYWN0LkNvbXBvbmVudCB7XG5cdHJlbmRlcigpIHtcblx0XHRyZXR1cm4oXG5cdFx0XHQ8ZGl2IGNsYXNzTmFtZT1cImludHJvXCI+XG5cdFx0XHRcdDxoMT5SZWFjdCBTVkcgRG91Z2hudXQ8L2gxPlxuICAgICAgICAgICAgICAgIDxwPkEgZmxleGlibGUsIGxpZ2h0d2VpZ2h0IFJlYWN0IGNvbXBvbmVudCBmb3I8YnIgLz5TVkcgZG91Z2hudXQgY2hhcnRzIG1hZGUgZWFzeSE8L3A+XG4gICAgICAgICAgICAgICAgPFN2Z0RvdWdobnV0IHBlcmNlbnRhZ2U9ezEwMH0gbGFiZWw9eydBd2Vzb21lISd9IHNldHRpbmdzPXt7XG5cdFx0XHRcdFx0c2l6ZTogMjAwLFxuXHRcdFx0XHRcdHRoaWNrbmVzczogMTUsXG5cdFx0XHRcdFx0cGF0aENvbG9yOiAnIzI5ODBCOScsXG5cdFx0XHRcdFx0Y2lyY2xlQ29sb3I6ICdyZ2JhKDAsIDAsIDAsIDAuMTUpJyxcblx0XHRcdFx0XHRhbmltYXRpb25EdXJhdGlvbjogMTAwMFxuXHRcdFx0XHR9fS8+XG5cdFx0XHQ8L2Rpdj5cblx0XHQpO1xuXHR9XG59O1xuXG5leHBvcnQgZGVmYXVsdCBJbnRybztcbiJdfQ==
-},{"react":33,"react-dom":26,"react-svg-doughnut":29}],5:[function(require,module,exports){
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9jb21wb25lbnRzL2ludHJvL2ludHJvLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7cUJBQXFCLE9BQU87Ozs7Z0NBQ0osb0JBQW9COzs7O0lBRXRDLEtBQUs7V0FBTCxLQUFLOztVQUFMLEtBQUs7d0JBQUwsS0FBSzs7NkJBQUwsS0FBSzs7O2NBQUwsS0FBSzs7U0FDSixrQkFBRztBQUNSLFVBQ0M7O01BQUssU0FBUyxFQUFDLE9BQU87SUFDckI7Ozs7S0FBMkI7SUFDZjs7OztLQUE4Qyw0Q0FBTTs7S0FBa0M7SUFDdEYsa0VBQWEsVUFBVSxFQUFFLEdBQUcsQUFBQyxFQUFDLFFBQVEsRUFBRTtBQUNuRCxlQUFTLEVBQUUsVUFBVTtBQUNyQixVQUFJLEVBQUUsR0FBRztBQUNULGVBQVMsRUFBRSxFQUFFO0FBQ2IsZUFBUyxFQUFFLFNBQVM7QUFDcEIsaUJBQVcsRUFBRSxxQkFBcUI7QUFDbEMsdUJBQWlCLEVBQUUsSUFBSTtNQUN2QixBQUFDLEdBQUU7SUFDQyxDQUNMO0dBQ0Y7OztRQWhCSSxLQUFLO0dBQVMsbUJBQU0sU0FBUzs7QUFpQmxDLENBQUM7O3FCQUVhLEtBQUsiLCJmaWxlIjoiL1VzZXJzL2RhbmllbC5vc2Jvcm5lL3JlcG9zL1JlYWN0LVNWRy1kb3VnaG51dC5naXRodWIuaW8vYXBwL2NvbXBvbmVudHMvaW50cm8vaW50cm8uanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgICAgZnJvbSAncmVhY3QnO1xuaW1wb3J0IFN2Z0RvdWdobnV0IGZyb20gJ3JlYWN0LXN2Zy1kb3VnaG51dCc7XG5cbmNsYXNzIEludHJvIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcblx0cmVuZGVyKCkge1xuXHRcdHJldHVybihcblx0XHRcdDxkaXYgY2xhc3NOYW1lPVwiaW50cm9cIj5cblx0XHRcdFx0PGgxPlJlYWN0IFNWRyBEb3VnaG51dDwvaDE+XG4gICAgICAgICAgICAgICAgPHA+QSBmbGV4aWJsZSwgbGlnaHR3ZWlnaHQgUmVhY3QgY29tcG9uZW50IGZvcjxiciAvPlNWRyBkb3VnaG51dCBjaGFydHMgbWFkZSBlYXN5ITwvcD5cbiAgICAgICAgICAgICAgICA8U3ZnRG91Z2hudXQgcGVyY2VudGFnZT17MTAwfSBzZXR0aW5ncz17e1xuXHRcdFx0XHRcdGxhYmVsVGV4dDogJ0F3ZXNvbWUhJyxcblx0XHRcdFx0XHRzaXplOiAyMDAsXG5cdFx0XHRcdFx0dGhpY2tuZXNzOiAxNSxcblx0XHRcdFx0XHRwYXRoQ29sb3I6ICcjMjk4MEI5Jyxcblx0XHRcdFx0XHRjaXJjbGVDb2xvcjogJ3JnYmEoMCwgMCwgMCwgMC4xNSknLFxuXHRcdFx0XHRcdGFuaW1hdGlvbkR1cmF0aW9uOiAxMDAwXG5cdFx0XHRcdH19Lz5cblx0XHRcdDwvZGl2PlxuXHRcdCk7XG5cdH1cbn07XG5cbmV4cG9ydCBkZWZhdWx0IEludHJvO1xuIl19
+},{"react":34,"react-svg-doughnut":30}],5:[function(require,module,exports){
 'use strict';
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -250,9 +255,9 @@ var _componentsInstallationInstallation = require('./components/installation/ins
 
 var _componentsInstallationInstallation2 = _interopRequireDefault(_componentsInstallationInstallation);
 
-var _componentsExamplesExamples = require('./components/examples/examples');
+var _componentsFooterFooter = require('./components/footer/footer');
 
-var _componentsExamplesExamples2 = _interopRequireDefault(_componentsExamplesExamples);
+var _componentsFooterFooter2 = _interopRequireDefault(_componentsFooterFooter);
 
 var App = (function (_React$Component) {
 	_inherits(App, _React$Component);
@@ -268,10 +273,10 @@ var App = (function (_React$Component) {
 		value: function render() {
 			return _react2['default'].createElement(
 				'div',
-				{ className: 'container' },
+				null,
 				_react2['default'].createElement(_componentsIntroIntro2['default'], null),
 				_react2['default'].createElement(_componentsInstallationInstallation2['default'], null),
-				_react2['default'].createElement(_componentsExamplesExamples2['default'], null)
+				_react2['default'].createElement(_componentsFooterFooter2['default'], null)
 			);
 		}
 	}]);
@@ -282,8 +287,8 @@ var App = (function (_React$Component) {
 ;
 
 _reactDom2['default'].render(_react2['default'].createElement(App, null), document.getElementById('rsvgd-app'));
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9mYWtlXzVkZWFlODFhLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7OztxQkFBcUIsT0FBTzs7Ozt3QkFDUCxXQUFXOzs7O29DQUNkLDBCQUEwQjs7OztrREFDbkIsd0NBQXdDOzs7OzBDQUM1QyxnQ0FBZ0M7Ozs7SUFFL0MsR0FBRztXQUFILEdBQUc7O1VBQUgsR0FBRzt3QkFBSCxHQUFHOzs2QkFBSCxHQUFHOzs7Y0FBSCxHQUFHOztTQUNGLGtCQUFHO0FBQ1IsVUFDQzs7TUFBSyxTQUFTLEVBQUMsV0FBVztJQUNiLHlFQUFTO0lBQ3JCLHVGQUFnQjtJQUNoQiwrRUFBWTtJQUNQLENBQ0w7R0FDRjs7O1FBVEksR0FBRztHQUFTLG1CQUFNLFNBQVM7O0FBVWhDLENBQUM7O0FBRUYsc0JBQVMsTUFBTSxDQUNkLGlDQUFDLEdBQUcsT0FBRyxFQUNQLFFBQVEsQ0FBQyxjQUFjLENBQUMsV0FBVyxDQUFDLENBQ3BDLENBQUMiLCJmaWxlIjoiL1VzZXJzL2RhbmllbC5vc2Jvcm5lL3JlcG9zL1JlYWN0LVNWRy1kb3VnaG51dC5naXRodWIuaW8vYXBwL2Zha2VfNWRlYWU4MWEuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgICAgZnJvbSAncmVhY3QnO1xuaW1wb3J0IFJlYWN0RE9NIGZyb20gJ3JlYWN0LWRvbSc7XG5pbXBvcnQgSW50cm8gZnJvbSAnLi9jb21wb25lbnRzL2ludHJvL2ludHJvJztcbmltcG9ydCBJbnN0YWxsYXRpb24gZnJvbSAnLi9jb21wb25lbnRzL2luc3RhbGxhdGlvbi9pbnN0YWxsYXRpb24nO1xuaW1wb3J0IEV4YW1wbGVzIGZyb20gJy4vY29tcG9uZW50cy9leGFtcGxlcy9leGFtcGxlcyc7XG5cbmNsYXNzIEFwcCBleHRlbmRzIFJlYWN0LkNvbXBvbmVudCB7XG5cdHJlbmRlcigpIHtcblx0XHRyZXR1cm4oXG5cdFx0XHQ8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lclwiPlxuICAgICAgICAgICAgICAgIDxJbnRybyAvPlxuXHRcdFx0XHQ8SW5zdGFsbGF0aW9uIC8+XG5cdFx0XHRcdDxFeGFtcGxlcyAvPlxuXHRcdFx0PC9kaXY+XG5cdFx0KTtcblx0fVxufTtcblxuUmVhY3RET00ucmVuZGVyKFxuXHQ8QXBwIC8+LFxuXHRkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncnN2Z2QtYXBwJylcbik7XG4iXX0=
-},{"./components/examples/examples":1,"./components/installation/installation":3,"./components/intro/intro":4,"react":33,"react-dom":26}],6:[function(require,module,exports){
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9mYWtlX2JlZWQ3YzA4LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7OztxQkFBcUIsT0FBTzs7Ozt3QkFDUCxXQUFXOzs7O29DQUNkLDBCQUEwQjs7OztrREFDbkIsd0NBQXdDOzs7O3NDQUM5Qyw0QkFBNEI7Ozs7SUFFekMsR0FBRztXQUFILEdBQUc7O1VBQUgsR0FBRzt3QkFBSCxHQUFHOzs2QkFBSCxHQUFHOzs7Y0FBSCxHQUFHOztTQUNGLGtCQUFHO0FBQ1IsVUFDQzs7O0lBQ2EseUVBQVM7SUFDckIsdUZBQWdCO0lBQ2hCLDJFQUFVO0lBQ0wsQ0FDTDtHQUNGOzs7UUFUSSxHQUFHO0dBQVMsbUJBQU0sU0FBUzs7QUFVaEMsQ0FBQzs7QUFFRixzQkFBUyxNQUFNLENBQ2QsaUNBQUMsR0FBRyxPQUFHLEVBQ1AsUUFBUSxDQUFDLGNBQWMsQ0FBQyxXQUFXLENBQUMsQ0FDcEMsQ0FBQyIsImZpbGUiOiIvVXNlcnMvZGFuaWVsLm9zYm9ybmUvcmVwb3MvUmVhY3QtU1ZHLWRvdWdobnV0LmdpdGh1Yi5pby9hcHAvZmFrZV9iZWVkN2MwOC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCAgICBmcm9tICdyZWFjdCc7XG5pbXBvcnQgUmVhY3RET00gZnJvbSAncmVhY3QtZG9tJztcbmltcG9ydCBJbnRybyBmcm9tICcuL2NvbXBvbmVudHMvaW50cm8vaW50cm8nO1xuaW1wb3J0IEluc3RhbGxhdGlvbiBmcm9tICcuL2NvbXBvbmVudHMvaW5zdGFsbGF0aW9uL2luc3RhbGxhdGlvbic7XG5pbXBvcnQgRm9vdGVyIGZyb20gJy4vY29tcG9uZW50cy9mb290ZXIvZm9vdGVyJztcblxuY2xhc3MgQXBwIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcblx0cmVuZGVyKCkge1xuXHRcdHJldHVybihcblx0XHRcdDxkaXY+XG4gICAgICAgICAgICAgICAgPEludHJvIC8+XG5cdFx0XHRcdDxJbnN0YWxsYXRpb24gLz5cblx0XHRcdFx0PEZvb3RlciAvPlxuXHRcdFx0PC9kaXY+XG5cdFx0KTtcblx0fVxufTtcblxuUmVhY3RET00ucmVuZGVyKFxuXHQ8QXBwIC8+LFxuXHRkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncnN2Z2QtYXBwJylcbik7XG4iXX0=
+},{"./components/footer/footer":1,"./components/installation/installation":3,"./components/intro/intro":4,"react":34,"react-dom":26}],6:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -18362,7 +18367,7 @@ module.exports = reactDom;
 }
 
 }).call(this,require("7YKIPe"))
-},{"7YKIPe":20,"fbjs/lib/ExecutionEnvironment":6,"fbjs/lib/camelizeStyleName":8,"fbjs/lib/containsNode":9,"fbjs/lib/emptyFunction":10,"fbjs/lib/emptyObject":11,"fbjs/lib/getActiveElement":12,"fbjs/lib/hyphenateStyleName":14,"fbjs/lib/invariant":15,"fbjs/lib/shallowEqual":18,"fbjs/lib/warning":19,"object-assign":21,"prop-types/checkPropTypes":22,"react":33}],25:[function(require,module,exports){
+},{"7YKIPe":20,"fbjs/lib/ExecutionEnvironment":6,"fbjs/lib/camelizeStyleName":8,"fbjs/lib/containsNode":9,"fbjs/lib/emptyFunction":10,"fbjs/lib/emptyObject":11,"fbjs/lib/getActiveElement":12,"fbjs/lib/hyphenateStyleName":14,"fbjs/lib/invariant":15,"fbjs/lib/shallowEqual":18,"fbjs/lib/warning":19,"object-assign":21,"prop-types/checkPropTypes":22,"react":34}],25:[function(require,module,exports){
 /** @license React v16.4.0
  * react-dom.production.min.js
  *
@@ -18602,7 +18607,7 @@ var qi={createPortal:pi,findDOMNode:function(a){return null==a?null:1===a.nodeTy
 arguments)},unstable_batchedUpdates:Yh,unstable_deferredUpdates:Dh,flushSync:$h,unstable_flushControlled:ai,__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED:{EventPluginHub:Ka,EventPluginRegistry:va,EventPropagators:$a,ReactControlledComponent:Rb,ReactDOMComponentTree:Qa,ReactDOMEventListener:Md},unstable_createRoot:function(a,b){return new li(a,!0,null!=b&&!0===b.hydrate)}};fi({findFiberByHostInstance:Na,bundleType:0,version:"16.4.0",rendererPackageName:"react-dom"});
 var vi={default:qi},wi=vi&&qi||vi;module.exports=wi.default?wi.default:wi;
 
-},{"fbjs/lib/ExecutionEnvironment":6,"fbjs/lib/containsNode":9,"fbjs/lib/emptyFunction":10,"fbjs/lib/emptyObject":11,"fbjs/lib/getActiveElement":12,"fbjs/lib/invariant":15,"fbjs/lib/shallowEqual":18,"object-assign":21,"react":33}],26:[function(require,module,exports){
+},{"fbjs/lib/ExecutionEnvironment":6,"fbjs/lib/containsNode":9,"fbjs/lib/emptyFunction":10,"fbjs/lib/emptyObject":11,"fbjs/lib/getActiveElement":12,"fbjs/lib/invariant":15,"fbjs/lib/shallowEqual":18,"object-assign":21,"react":34}],26:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -18645,6 +18650,121 @@ if (process.env.NODE_ENV === 'production') {
 
 }).call(this,require("7YKIPe"))
 },{"./cjs/react-dom.development.js":24,"./cjs/react-dom.production.min.js":25,"7YKIPe":20}],27:[function(require,module,exports){
+module.exports={
+  "_args": [
+    [
+      {
+        "raw": "react-svg-doughnut",
+        "scope": null,
+        "escapedName": "react-svg-doughnut",
+        "name": "react-svg-doughnut",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/daniel.osborne/repos/React-SVG-doughnut.github.io"
+    ]
+  ],
+  "_from": "react-svg-doughnut@latest",
+  "_id": "react-svg-doughnut@1.1.0",
+  "_inCache": true,
+  "_location": "/react-svg-doughnut",
+  "_nodeVersion": "6.10.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/react-svg-doughnut_1.1.0_1529071146785_0.4532541216590127"
+  },
+  "_npmUser": {
+    "name": "dannyoz",
+    "email": "danosborne@rocketmail.com"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "react-svg-doughnut",
+    "scope": null,
+    "escapedName": "react-svg-doughnut",
+    "name": "react-svg-doughnut",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-svg-doughnut/-/react-svg-doughnut-1.1.0.tgz",
+  "_shasum": "5f51376bd46a8c45f81a0bb23892f84a7c1e7fda",
+  "_shrinkwrap": null,
+  "_spec": "react-svg-doughnut",
+  "_where": "/Users/daniel.osborne/repos/React-SVG-doughnut.github.io",
+  "author": {
+    "name": "dannyoz"
+  },
+  "bugs": {
+    "url": "https://github.com/dannyoz/react-svg-doughnut/issues"
+  },
+  "dependenceies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "babel-core": "^6.14.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-runtime": "^6.11.6",
+    "babelify": "^6.1.2",
+    "browserify": "^13.1.0",
+    "gulp-browserify": "^0.5.1"
+  },
+  "dependencies": {},
+  "description": "A React component for SVG doughnut charts made easy!",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.51",
+    "@babel/preset-env": "^7.0.0-beta.51",
+    "babel-cli": "^6.26.0",
+    "babel-preset-react": "^6.24.1",
+    "connect": "^3.6.6",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0-beta.2",
+    "gulp-bump": "^3.1.1",
+    "gulp-react": "^3.1.0",
+    "react-dom": "^16.2.0",
+    "serve-static": "^1.13.2"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "5f51376bd46a8c45f81a0bb23892f84a7c1e7fda",
+    "tarball": "https://registry.npmjs.org/react-svg-doughnut/-/react-svg-doughnut-1.1.0.tgz",
+    "fileCount": 10,
+    "unpackedSize": 232027
+  },
+  "gitHead": "0755c2fc7817f655c8662701e711e78f083a8bef",
+  "homepage": "https://github.com/dannyoz/react-svg-doughnut#readme",
+  "keywords": [
+    "React",
+    "SVG"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "maintainers": [
+    {
+      "name": "dannyoz",
+      "email": "danosborne@rocketmail.com"
+    }
+  ],
+  "name": "react-svg-doughnut",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dannyoz/react-svg-doughnut.git"
+  },
+  "scripts": {
+    "test": "run_tests"
+  },
+  "version": "1.1.0"
+}
+
+},{}],28:[function(require,module,exports){
 module.exports = (percentage, size, thickness) => {
     const PI = Math.PI;
     const cos = Math.cos;
@@ -18671,7 +18791,7 @@ module.exports = (percentage, size, thickness) => {
     return String(attrString);
 }
 
-},{}],28:[function(require,module,exports){
+},{}],29:[function(require,module,exports){
 module.exports = (settings) => {
 	return {
 		svgStyle: {
@@ -18711,7 +18831,7 @@ module.exports = (settings) => {
 	};
 }
 
-},{}],29:[function(require,module,exports){
+},{}],30:[function(require,module,exports){
 const React = require('react');
 const calculatePathShape = require('./calculate-path-shape');
 const generateStyles = require('./generate-styles');
@@ -18730,6 +18850,7 @@ class SvgDoughnut extends React.Component {
         this.size = this.props.settings.size || 150;
         this.percentage = this.props.percentage || 0;
         this.animationDuration = this.props.settings.animationDuration;
+        this.labelText = this.props.settings.labelText;
     }
 
     componentDidMount() {
@@ -18770,7 +18891,7 @@ class SvgDoughnut extends React.Component {
                 ), 
                 React.createElement("div", {style: Object.assign({}, this.styles.textWrapperStyle)}, 
                     React.createElement("p", {style: Object.assign({}, this.styles.percentageTextStyle)}, `${this.state.appliedPercentage}%`), 
-                    this.props.label && React.createElement("p", {style: Object.assign({}, this.styles.labelTextStyle)}, this.props.label)
+                    this.labelText && React.createElement("p", {style: Object.assign({}, this.styles.labelTextStyle)}, this.labelText)
                 )
             )
         );
@@ -18779,12 +18900,12 @@ class SvgDoughnut extends React.Component {
 
 module.exports = SvgDoughnut;
 
-},{"./calculate-path-shape":27,"./generate-styles":28,"./step-duration":30,"react":33}],30:[function(require,module,exports){
+},{"./calculate-path-shape":28,"./generate-styles":29,"./step-duration":31,"react":34}],31:[function(require,module,exports){
 module.exports = (percentage, duration) => {
 	return duration / percentage;
 };
 
-},{}],31:[function(require,module,exports){
+},{}],32:[function(require,module,exports){
 (function (process){
 /** @license React v16.4.0
  * react.development.js
@@ -20262,7 +20383,7 @@ module.exports = react;
 }
 
 }).call(this,require("7YKIPe"))
-},{"7YKIPe":20,"fbjs/lib/emptyFunction":10,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":15,"fbjs/lib/warning":19,"object-assign":21,"prop-types/checkPropTypes":22}],32:[function(require,module,exports){
+},{"7YKIPe":20,"fbjs/lib/emptyFunction":10,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":15,"fbjs/lib/warning":19,"object-assign":21,"prop-types/checkPropTypes":22}],33:[function(require,module,exports){
 /** @license React v16.4.0
  * react.production.min.js
  *
@@ -20286,7 +20407,7 @@ _calculateChangedBits:b,_defaultValue:a,_currentValue:a,_currentValue2:a,_change
 b.key&&(g=""+b.key);var l=void 0;a.type&&a.type.defaultProps&&(l=a.type.defaultProps);for(c in b)K.call(b,c)&&!L.hasOwnProperty(c)&&(d[c]=void 0===b[c]&&void 0!==l?l[c]:b[c])}c=arguments.length-2;if(1===c)d.children=e;else if(1<c){l=Array(c);for(var m=0;m<c;m++)l[m]=arguments[m+2];d.children=l}return{$$typeof:t,type:a.type,key:g,ref:h,props:d,_owner:f}},createFactory:function(a){var b=M.bind(null,a);b.type=a;return b},isValidElement:N,version:"16.4.0",__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED:{ReactCurrentOwner:J,
 assign:k}},Y={default:X},Z=Y&&X||Y;module.exports=Z.default?Z.default:Z;
 
-},{"fbjs/lib/emptyFunction":10,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":15,"object-assign":21}],33:[function(require,module,exports){
+},{"fbjs/lib/emptyFunction":10,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":15,"object-assign":21}],34:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -20297,4 +20418,4 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 }).call(this,require("7YKIPe"))
-},{"./cjs/react.development.js":31,"./cjs/react.production.min.js":32,"7YKIPe":20}]},{},[5])
+},{"./cjs/react.development.js":32,"./cjs/react.production.min.js":33,"7YKIPe":20}]},{},[5])
