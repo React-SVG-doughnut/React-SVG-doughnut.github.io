@@ -2,10 +2,19 @@
 @include normalise;
 @include googleFont('arvo',h1 h2 h3 h4 h5 h6,400);
 @include googleFont('open-sans',body textarea button);
-@include containerClass;
+@include containerClass(800px);
+
+$primary: $col-belize-hole;
 
 body{
+    color: #353535;
+    background-color: #dadfe4;
     @include verticalRhythm;
 }
 
+h1, h2, h3, h4, h5, h6, {
+    color: $primary;
+}
+
 @import "./components/intro/intro";
+@import "./components/installation/installation";
