@@ -1,0 +1,50 @@
+.installation {
+
+    code {
+        display: inline-block;
+    }
+
+    .jsx {
+        padding: 1.5rem;
+        background-color: $col-slate;
+        border-radius: 0.5rem;
+        @include scrollbar($col-slate);
+
+        &__char {
+            color: $col-clouds;
+        }
+
+        &__var {
+            color: $col-orange;
+        }
+
+        &__kwd {
+            color: $col-alizarin;
+        }
+
+        &__attr {
+            color: $col-nephritis;
+        }
+
+        &__equ {
+            color: $col-alizarin;
+        }
+
+        &__str {
+            color: $col-sunflower;
+        }
+
+        &__int {
+            color: $col-belize-hole;
+        }
+
+        &__key {
+            color: $col-orange;
+        }
+
+        &__colon {
+            color: $col-wet-asphalt;
+        }
+    }
+    
+}
