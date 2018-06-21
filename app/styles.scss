@@ -16,6 +16,11 @@ h1, h2, h3, h4, h5, h6, {
     color: $primary;
 }
 
+strong {
+    font-weight: bold;
+}
+
 @import "./components/intro/intro";
 @import "./components/installation/installation";
+@import "./components/configuration/configuration";
 @import "./components/footer/footer";

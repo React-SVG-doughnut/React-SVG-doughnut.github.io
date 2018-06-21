@@ -7,12 +7,13 @@ class Intro extends React.Component {
 			<div className="intro">
 				<h1>React SVG Doughnut</h1>
                 <p>A flexible, lightweight React component for<br />SVG doughnut charts made easy!</p>
-                <SvgDoughnut percentage={100} settings={{
+                <SvgDoughnut settings={{
+					percentage: 100,
 					labelText: 'Awesome!',
 					size: 200,
 					thickness: 15,
-					pathColor: '#2980B9',
-					circleColor: 'rgba(0, 0, 0, 0.15)',
+					primaryColour: '#2980B9',
+					ringColour: 'rgba(0, 0, 0, 0.15)',
 					animationDuration: 1000
 				}}/>
 			</div>

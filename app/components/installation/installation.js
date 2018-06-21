@@ -1,4 +1,4 @@
-import React    from 'react';
+import React from 'react';
 import { largeExample } from './example';
 
 function createExampe() {
@@ -10,8 +10,10 @@ class Installation extends React.Component {
         return (
             <div className="installation container">
                 <h3>Installation</h3>
-                <p>React SVG doughnut can be downloaded via NPM:</p>
-                <code className="jsx"><span className="jsx__char">npm install react-svg-doughnut --save</span></code>
+                <p>React SVG doughnut can be downloaded with yarn:</p>
+                <pre className="jsx"><span className="jsx__char">$ yarn add react-svg-doughnut</span></pre>
+                <p>Or via NPM:</p>
+                <pre className="jsx"><span className="jsx__char">$ npm install react-svg-doughnut --save</span></pre>
                 <p>Example of basic Usage:</p>
                 <pre className="jsx" dangerouslySetInnerHTML={createExampe()} />
             </div>
