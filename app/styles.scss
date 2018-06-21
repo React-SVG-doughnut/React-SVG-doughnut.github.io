@@ -1,7 +1,8 @@
 @import "../node_modules/spice-sass/src/spice";
 @include normalise;
-@include googleFont('arvo',h1 h2 h3 h4 h5 h6,400);
-@include googleFont('open-sans',body textarea button);
+// @include googleFont('arvo',h1 h2 h3 h4 h5 h6,400);
+// @include googleFont('open-sans',body textarea button);
+@import url("https://use.typekit.net/hfs7ihd.css");
 @include containerClass(1000px);
 
 $primary: $col-belize-hole;
@@ -9,11 +10,17 @@ $primary: $col-belize-hole;
 body{
     color: #353535;
     background-color: #dadfe4;
+    font-family: "ff-enzo-web";
     @include verticalRhythm;
 }
 
 h1, h2, h3, h4, h5, h6, {
     color: $primary;
+    font-weight: bold;
+}
+
+.sarina {
+    font-family: "sarina";
 }
 
 strong {

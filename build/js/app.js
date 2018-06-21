@@ -455,7 +455,7 @@ var Intro = (function (_React$Component) {
 				{ className: 'intro' },
 				_react2['default'].createElement(
 					'h1',
-					null,
+					{ className: 'sarina' },
 					'React SVG Doughnut'
 				),
 				_react2['default'].createElement(
@@ -485,7 +485,7 @@ var Intro = (function (_React$Component) {
 
 exports['default'] = Intro;
 module.exports = exports['default'];
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9jb21wb25lbnRzL2ludHJvL2ludHJvLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7cUJBQXFCLE9BQU87Ozs7Z0NBQ0osb0JBQW9COzs7O0lBRXRDLEtBQUs7V0FBTCxLQUFLOztVQUFMLEtBQUs7d0JBQUwsS0FBSzs7NkJBQUwsS0FBSzs7O2NBQUwsS0FBSzs7U0FDSixrQkFBRztBQUNSLFVBQ0M7O01BQUssU0FBUyxFQUFDLE9BQU87SUFDckI7Ozs7S0FBMkI7SUFDZjs7OztLQUE4Qyw0Q0FBTTs7S0FBa0M7SUFDdEYsa0VBQWEsUUFBUSxFQUFFO0FBQ2xDLGdCQUFVLEVBQUUsR0FBRztBQUNmLGVBQVMsRUFBRSxVQUFVO0FBQ3JCLFVBQUksRUFBRSxHQUFHO0FBQ1QsZUFBUyxFQUFFLEVBQUU7QUFDYixtQkFBYSxFQUFFLFNBQVM7QUFDeEIsZ0JBQVUsRUFBRSxxQkFBcUI7QUFDakMsdUJBQWlCLEVBQUUsSUFBSTtNQUN2QixBQUFDLEdBQUU7SUFDQyxDQUNMO0dBQ0Y7OztRQWpCSSxLQUFLO0dBQVMsbUJBQU0sU0FBUzs7QUFrQmxDLENBQUM7O3FCQUVhLEtBQUsiLCJmaWxlIjoiL1VzZXJzL2RhbmllbC5vc2Jvcm5lL3JlcG9zL1JlYWN0LVNWRy1kb3VnaG51dC5naXRodWIuaW8vYXBwL2NvbXBvbmVudHMvaW50cm8vaW50cm8uanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgICAgZnJvbSAncmVhY3QnO1xuaW1wb3J0IFN2Z0RvdWdobnV0IGZyb20gJ3JlYWN0LXN2Zy1kb3VnaG51dCc7XG5cbmNsYXNzIEludHJvIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcblx0cmVuZGVyKCkge1xuXHRcdHJldHVybihcblx0XHRcdDxkaXYgY2xhc3NOYW1lPVwiaW50cm9cIj5cblx0XHRcdFx0PGgxPlJlYWN0IFNWRyBEb3VnaG51dDwvaDE+XG4gICAgICAgICAgICAgICAgPHA+QSBmbGV4aWJsZSwgbGlnaHR3ZWlnaHQgUmVhY3QgY29tcG9uZW50IGZvcjxiciAvPlNWRyBkb3VnaG51dCBjaGFydHMgbWFkZSBlYXN5ITwvcD5cbiAgICAgICAgICAgICAgICA8U3ZnRG91Z2hudXQgc2V0dGluZ3M9e3tcblx0XHRcdFx0XHRwZXJjZW50YWdlOiAxMDAsXG5cdFx0XHRcdFx0bGFiZWxUZXh0OiAnQXdlc29tZSEnLFxuXHRcdFx0XHRcdHNpemU6IDIwMCxcblx0XHRcdFx0XHR0aGlja25lc3M6IDE1LFxuXHRcdFx0XHRcdHByaW1hcnlDb2xvdXI6ICcjMjk4MEI5Jyxcblx0XHRcdFx0XHRyaW5nQ29sb3VyOiAncmdiYSgwLCAwLCAwLCAwLjE1KScsXG5cdFx0XHRcdFx0YW5pbWF0aW9uRHVyYXRpb246IDEwMDBcblx0XHRcdFx0fX0vPlxuXHRcdFx0PC9kaXY+XG5cdFx0KTtcblx0fVxufTtcblxuZXhwb3J0IGRlZmF1bHQgSW50cm87XG4iXX0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9jb21wb25lbnRzL2ludHJvL2ludHJvLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7cUJBQXFCLE9BQU87Ozs7Z0NBQ0osb0JBQW9COzs7O0lBRXRDLEtBQUs7V0FBTCxLQUFLOztVQUFMLEtBQUs7d0JBQUwsS0FBSzs7NkJBQUwsS0FBSzs7O2NBQUwsS0FBSzs7U0FDSixrQkFBRztBQUNSLFVBQ0M7O01BQUssU0FBUyxFQUFDLE9BQU87SUFDckI7O09BQUksU0FBUyxFQUFDLFFBQVE7O0tBQXdCO0lBQ2xDOzs7O0tBQThDLDRDQUFNOztLQUFrQztJQUN0RixrRUFBYSxRQUFRLEVBQUU7QUFDbEMsZ0JBQVUsRUFBRSxHQUFHO0FBQ2YsZUFBUyxFQUFFLFVBQVU7QUFDckIsVUFBSSxFQUFFLEdBQUc7QUFDVCxlQUFTLEVBQUUsRUFBRTtBQUNiLG1CQUFhLEVBQUUsU0FBUztBQUN4QixnQkFBVSxFQUFFLHFCQUFxQjtBQUNqQyx1QkFBaUIsRUFBRSxJQUFJO01BQ3ZCLEFBQUMsR0FBRTtJQUNDLENBQ0w7R0FDRjs7O1FBakJJLEtBQUs7R0FBUyxtQkFBTSxTQUFTOztBQWtCbEMsQ0FBQzs7cUJBRWEsS0FBSyIsImZpbGUiOiIvVXNlcnMvZGFuaWVsLm9zYm9ybmUvcmVwb3MvUmVhY3QtU1ZHLWRvdWdobnV0LmdpdGh1Yi5pby9hcHAvY29tcG9uZW50cy9pbnRyby9pbnRyby5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCAgICBmcm9tICdyZWFjdCc7XG5pbXBvcnQgU3ZnRG91Z2hudXQgZnJvbSAncmVhY3Qtc3ZnLWRvdWdobnV0JztcblxuY2xhc3MgSW50cm8gZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xuXHRyZW5kZXIoKSB7XG5cdFx0cmV0dXJuKFxuXHRcdFx0PGRpdiBjbGFzc05hbWU9XCJpbnRyb1wiPlxuXHRcdFx0XHQ8aDEgY2xhc3NOYW1lPVwic2FyaW5hXCI+UmVhY3QgU1ZHIERvdWdobnV0PC9oMT5cbiAgICAgICAgICAgICAgICA8cD5BIGZsZXhpYmxlLCBsaWdodHdlaWdodCBSZWFjdCBjb21wb25lbnQgZm9yPGJyIC8+U1ZHIGRvdWdobnV0IGNoYXJ0cyBtYWRlIGVhc3khPC9wPlxuICAgICAgICAgICAgICAgIDxTdmdEb3VnaG51dCBzZXR0aW5ncz17e1xuXHRcdFx0XHRcdHBlcmNlbnRhZ2U6IDEwMCxcblx0XHRcdFx0XHRsYWJlbFRleHQ6ICdBd2Vzb21lIScsXG5cdFx0XHRcdFx0c2l6ZTogMjAwLFxuXHRcdFx0XHRcdHRoaWNrbmVzczogMTUsXG5cdFx0XHRcdFx0cHJpbWFyeUNvbG91cjogJyMyOTgwQjknLFxuXHRcdFx0XHRcdHJpbmdDb2xvdXI6ICdyZ2JhKDAsIDAsIDAsIDAuMTUpJyxcblx0XHRcdFx0XHRhbmltYXRpb25EdXJhdGlvbjogMTAwMFxuXHRcdFx0XHR9fS8+XG5cdFx0XHQ8L2Rpdj5cblx0XHQpO1xuXHR9XG59O1xuXG5leHBvcnQgZGVmYXVsdCBJbnRybztcbiJdfQ==
 },{"react":37,"react-svg-doughnut":30}],7:[function(require,module,exports){
 'use strict';
 
@@ -552,7 +552,7 @@ var App = (function (_React$Component) {
 ;
 
 _reactDom2['default'].render(_react2['default'].createElement(App, null), document.getElementById('rsvgd-app'));
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9mYWtlX2Y1NjY3ZTVhLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7OztxQkFBcUIsT0FBTzs7Ozt3QkFDUCxXQUFXOzs7O29DQUNkLDBCQUEwQjs7OztrREFDbkIsd0NBQXdDOzs7O29EQUN2QywwQ0FBMEM7Ozs7c0NBQ2pELDRCQUE0Qjs7OztJQUV6QyxHQUFHO1dBQUgsR0FBRzs7VUFBSCxHQUFHO3dCQUFILEdBQUc7OzZCQUFILEdBQUc7OztjQUFILEdBQUc7O1NBQ0Ysa0JBQUc7QUFDUixVQUNDOzs7SUFDYSx5RUFBUztJQUNyQix1RkFBZ0I7SUFDaEIseUZBQWlCO0lBQ2pCLDJFQUFVO0lBQ0wsQ0FDTDtHQUNGOzs7UUFWSSxHQUFHO0dBQVMsbUJBQU0sU0FBUzs7QUFXaEMsQ0FBQzs7QUFFRixzQkFBUyxNQUFNLENBQ2QsaUNBQUMsR0FBRyxPQUFHLEVBQ1AsUUFBUSxDQUFDLGNBQWMsQ0FBQyxXQUFXLENBQUMsQ0FDcEMsQ0FBQyIsImZpbGUiOiIvVXNlcnMvZGFuaWVsLm9zYm9ybmUvcmVwb3MvUmVhY3QtU1ZHLWRvdWdobnV0LmdpdGh1Yi5pby9hcHAvZmFrZV9mNTY2N2U1YS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCAgICBmcm9tICdyZWFjdCc7XG5pbXBvcnQgUmVhY3RET00gZnJvbSAncmVhY3QtZG9tJztcbmltcG9ydCBJbnRybyBmcm9tICcuL2NvbXBvbmVudHMvaW50cm8vaW50cm8nO1xuaW1wb3J0IEluc3RhbGxhdGlvbiBmcm9tICcuL2NvbXBvbmVudHMvaW5zdGFsbGF0aW9uL2luc3RhbGxhdGlvbic7XG5pbXBvcnQgQ29uZmlndXJhdGlvbiBmcm9tICcuL2NvbXBvbmVudHMvY29uZmlndXJhdGlvbi9jb25maWd1cmF0aW9uJztcbmltcG9ydCBGb290ZXIgZnJvbSAnLi9jb21wb25lbnRzL2Zvb3Rlci9mb290ZXInO1xuXG5jbGFzcyBBcHAgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xuXHRyZW5kZXIoKSB7XG5cdFx0cmV0dXJuKFxuXHRcdFx0PGRpdj5cbiAgICAgICAgICAgICAgICA8SW50cm8gLz5cblx0XHRcdFx0PEluc3RhbGxhdGlvbiAvPlxuXHRcdFx0XHQ8Q29uZmlndXJhdGlvbiAvPlxuXHRcdFx0XHQ8Rm9vdGVyIC8+XG5cdFx0XHQ8L2Rpdj5cblx0XHQpO1xuXHR9XG59O1xuXG5SZWFjdERPTS5yZW5kZXIoXG5cdDxBcHAgLz4sXG5cdGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdyc3ZnZC1hcHAnKVxuKTtcbiJdfQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9mYWtlXzZmNmJmZmZiLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7OztxQkFBcUIsT0FBTzs7Ozt3QkFDUCxXQUFXOzs7O29DQUNkLDBCQUEwQjs7OztrREFDbkIsd0NBQXdDOzs7O29EQUN2QywwQ0FBMEM7Ozs7c0NBQ2pELDRCQUE0Qjs7OztJQUV6QyxHQUFHO1dBQUgsR0FBRzs7VUFBSCxHQUFHO3dCQUFILEdBQUc7OzZCQUFILEdBQUc7OztjQUFILEdBQUc7O1NBQ0Ysa0JBQUc7QUFDUixVQUNDOzs7SUFDYSx5RUFBUztJQUNyQix1RkFBZ0I7SUFDaEIseUZBQWlCO0lBQ2pCLDJFQUFVO0lBQ0wsQ0FDTDtHQUNGOzs7UUFWSSxHQUFHO0dBQVMsbUJBQU0sU0FBUzs7QUFXaEMsQ0FBQzs7QUFFRixzQkFBUyxNQUFNLENBQ2QsaUNBQUMsR0FBRyxPQUFHLEVBQ1AsUUFBUSxDQUFDLGNBQWMsQ0FBQyxXQUFXLENBQUMsQ0FDcEMsQ0FBQyIsImZpbGUiOiIvVXNlcnMvZGFuaWVsLm9zYm9ybmUvcmVwb3MvUmVhY3QtU1ZHLWRvdWdobnV0LmdpdGh1Yi5pby9hcHAvZmFrZV82ZjZiZmZmYi5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCAgICBmcm9tICdyZWFjdCc7XG5pbXBvcnQgUmVhY3RET00gZnJvbSAncmVhY3QtZG9tJztcbmltcG9ydCBJbnRybyBmcm9tICcuL2NvbXBvbmVudHMvaW50cm8vaW50cm8nO1xuaW1wb3J0IEluc3RhbGxhdGlvbiBmcm9tICcuL2NvbXBvbmVudHMvaW5zdGFsbGF0aW9uL2luc3RhbGxhdGlvbic7XG5pbXBvcnQgQ29uZmlndXJhdGlvbiBmcm9tICcuL2NvbXBvbmVudHMvY29uZmlndXJhdGlvbi9jb25maWd1cmF0aW9uJztcbmltcG9ydCBGb290ZXIgZnJvbSAnLi9jb21wb25lbnRzL2Zvb3Rlci9mb290ZXInO1xuXG5jbGFzcyBBcHAgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xuXHRyZW5kZXIoKSB7XG5cdFx0cmV0dXJuKFxuXHRcdFx0PGRpdj5cbiAgICAgICAgICAgICAgICA8SW50cm8gLz5cblx0XHRcdFx0PEluc3RhbGxhdGlvbiAvPlxuXHRcdFx0XHQ8Q29uZmlndXJhdGlvbiAvPlxuXHRcdFx0XHQ8Rm9vdGVyIC8+XG5cdFx0XHQ8L2Rpdj5cblx0XHQpO1xuXHR9XG59O1xuXG5SZWFjdERPTS5yZW5kZXIoXG5cdDxBcHAgLz4sXG5cdGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdyc3ZnZC1hcHAnKVxuKTtcbiJdfQ==
 },{"./components/configuration/configuration":1,"./components/footer/footer":3,"./components/installation/installation":5,"./components/intro/intro":6,"react":37,"react-dom":28}],8:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -18931,13 +18931,13 @@ module.exports={
     ]
   ],
   "_from": "react-svg-doughnut@latest",
-  "_id": "react-svg-doughnut@2.0.0",
+  "_id": "react-svg-doughnut@2.0.1",
   "_inCache": true,
   "_location": "/react-svg-doughnut",
   "_nodeVersion": "6.10.0",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/react-svg-doughnut_2.0.0_1529590443252_0.12712869471699761"
+    "tmp": "tmp/react-svg-doughnut_2.0.1_1529597038482_0.42635473152242986"
   },
   "_npmUser": {
     "name": "dannyoz",
@@ -18958,8 +18958,8 @@ module.exports={
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/react-svg-doughnut/-/react-svg-doughnut-2.0.0.tgz",
-  "_shasum": "2d8fb71726f3d7b4bd65801971f7e06880726d57",
+  "_resolved": "https://registry.npmjs.org/react-svg-doughnut/-/react-svg-doughnut-2.0.1.tgz",
+  "_shasum": "9873ff509827391bc79e183f50927f2aaca5a04a",
   "_shrinkwrap": null,
   "_spec": "react-svg-doughnut",
   "_where": "/Users/daniel.osborne/repos/React-SVG-doughnut.github.io",
@@ -18997,12 +18997,12 @@ module.exports={
   },
   "directories": {},
   "dist": {
-    "shasum": "2d8fb71726f3d7b4bd65801971f7e06880726d57",
-    "tarball": "https://registry.npmjs.org/react-svg-doughnut/-/react-svg-doughnut-2.0.0.tgz",
+    "shasum": "9873ff509827391bc79e183f50927f2aaca5a04a",
+    "tarball": "https://registry.npmjs.org/react-svg-doughnut/-/react-svg-doughnut-2.0.1.tgz",
     "fileCount": 14,
-    "unpackedSize": 16511
+    "unpackedSize": 16508
   },
-  "gitHead": "7c93068ba21cc3ede5c7b858dc244cb02b99bdfb",
+  "gitHead": "cae9306529d855781700ec8ec6f5115da48ec015",
   "homepage": "https://github.com/dannyoz/react-svg-doughnut#readme",
   "keywords": [
     "React",
@@ -19026,7 +19026,7 @@ module.exports={
   "scripts": {
     "test": "jest"
   },
-  "version": "2.0.0"
+  "version": "2.0.1"
 }
 
 },{}],30:[function(require,module,exports){
@@ -19157,7 +19157,7 @@ module.exports = (settings) => {
             stroke: settings.primaryColour || '#e7534f',
         },
         textWrapperStyle: {
-            fontFamily: settings.fontFamily || 'sans-serif',
+            fontFamily: settings.fontFamily || 'inherit',
             position: 'absolute',
             left: '50%',
             top: '50%',

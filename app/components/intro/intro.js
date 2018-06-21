@@ -5,7 +5,7 @@ class Intro extends React.Component {
 	render() {
 		return(
 			<div className="intro">
-				<h1>React SVG Doughnut</h1>
+				<h1 className="sarina">React SVG Doughnut</h1>
                 <p>A flexible, lightweight React component for<br />SVG doughnut charts made easy!</p>
                 <SvgDoughnut settings={{
 					percentage: 100,
