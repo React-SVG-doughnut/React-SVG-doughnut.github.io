@@ -1,0 +1,31 @@
+$border-colour: #939da7;
+
+.configuration {
+    @include flexGrid;
+
+    &__table-cell {
+        padding: 1rem;
+        border-left: 1px solid $border-colour;
+
+        p {
+            margin: 0;
+        }
+
+        &:last-child {
+            border-right: 1px solid $border-colour;
+        }
+    }
+
+    &__table-row {
+        border-top: 1px solid $border-colour;
+        background-color: #c2ccd6;
+
+        &:nth-of-type(even) {
+            background-color: #cfd5dc;
+        }
+
+        &:last-of-type {
+            border-bottom: 1px solid $border-colour;
+        }
+    }
+}
