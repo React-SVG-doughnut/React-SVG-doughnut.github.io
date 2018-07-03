@@ -28,6 +28,6 @@
     "spice-sass": "^2.0.0"
   },
   "dependencies": {
-    "react-svg-doughnut": "^2.0.1"
+    "react-svg-doughnut": "^3.0.0"
   }
 }

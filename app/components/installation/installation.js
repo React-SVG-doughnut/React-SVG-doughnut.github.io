@@ -1,8 +1,8 @@
 import React from 'react';
-import { largeExample } from './example';
+import { largeExample, example1 } from './example';
 
 function createExampe() {
-    return {__html: largeExample};
+    return {__html: example1};
 };
 
 class Installation extends React.Component {

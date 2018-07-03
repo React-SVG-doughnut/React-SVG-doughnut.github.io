@@ -1,4 +1,9 @@
 [{
+    "setting": "value",
+    "type": "Number",
+    "defaultValue": "0",
+    "description": "Value to be displayed in the centre of a graphic."
+},{
     "setting": "size (px)",
     "type": "Number",
     "defaultValue": 150,
@@ -54,8 +59,13 @@
     "defaultValue": "bold",
     "description": "Percentage font weight (valid css fontWeight string)."
 },{
-    "setting": "percentage",
+    "setting": "ceiling",
     "type": "Number",
-    "defaultValue": "0",
-    "description": "You can also define your percentage value here. Note: the percentage prop takes precendence over this value."
+    "defaultValue": "100",
+    "description": "The ceiling used to calculate the percentage / fraction."
+},{
+    "setting": "format",
+    "type": "String",
+    "defaultValue": "bold",
+    "description": "The format displayed. 'percentage' or 'fraction'"
 }]
