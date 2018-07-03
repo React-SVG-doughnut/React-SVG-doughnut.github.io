@@ -19,6 +19,290 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactSvgDoughnut = require('react-svg-doughnut');
+
+var _reactSvgDoughnut2 = _interopRequireDefault(_reactSvgDoughnut);
+
+var Builder = (function (_React$Component) {
+    _inherits(Builder, _React$Component);
+
+    function Builder(props) {
+        _classCallCheck(this, Builder);
+
+        _get(Object.getPrototypeOf(Builder.prototype), 'constructor', this).call(this, props);
+        this.state = {
+            value: 75,
+            format: 'percentage',
+            ceiling: 100,
+            thickness: 15,
+            size: 300,
+            primaryColour: '#2980B9',
+            ringColour: '#AAAAAA',
+            percentageFontSize: 35,
+            percentageFontWeight: 'bold',
+            labelText: 'Label text',
+            labelPosition: 'bottom',
+            labelFontSize: 18,
+            labelFontWeight: 'normal',
+            labelColour: '#333333'
+        };
+    }
+
+    _createClass(Builder, [{
+        key: 'changeSetting',
+        value: function changeSetting(setting, event) {
+            var value = event.target.value;
+            var state = this.state;
+            state[setting] = value;
+            this.setState(state);
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return _react2['default'].createElement(
+                'div',
+                { className: 'builder container' },
+                _react2['default'].createElement(
+                    'h3',
+                    null,
+                    'Build your own'
+                ),
+                _react2['default'].createElement(
+                    'div',
+                    { className: 'flex-grid-row' },
+                    _react2['default'].createElement(
+                        'div',
+                        { className: 'flex-grid-col-5' },
+                        _react2['default'].createElement(
+                            'div',
+                            { className: 'builder__setting' },
+                            _react2['default'].createElement(
+                                'label',
+                                null,
+                                'Format:'
+                            ),
+                            _react2['default'].createElement(
+                                'select',
+                                { value: this.state.format, onChange: this.changeSetting.bind(this, 'format') },
+                                _react2['default'].createElement(
+                                    'option',
+                                    null,
+                                    'percentage'
+                                ),
+                                _react2['default'].createElement(
+                                    'option',
+                                    null,
+                                    'fraction'
+                                )
+                            )
+                        ),
+                        _react2['default'].createElement(
+                            'div',
+                            { className: 'builder__setting' },
+                            _react2['default'].createElement(
+                                'label',
+                                null,
+                                'Value:'
+                            ),
+                            _react2['default'].createElement('input', { type: 'range', value: this.state.value, onChange: this.changeSetting.bind(this, 'value'), min: '0', max: this.state.ceiling })
+                        ),
+                        this.state.format === 'fraction' && _react2['default'].createElement(
+                            'div',
+                            { className: 'builder__setting' },
+                            _react2['default'].createElement(
+                                'label',
+                                null,
+                                'Ceiling:'
+                            ),
+                            _react2['default'].createElement('input', { type: 'range', value: this.state.ceiling, onChange: this.changeSetting.bind(this, 'ceiling'), min: '1', max: '500' })
+                        ),
+                        _react2['default'].createElement(
+                            'div',
+                            { className: 'builder__setting' },
+                            _react2['default'].createElement(
+                                'label',
+                                null,
+                                'Size:'
+                            ),
+                            _react2['default'].createElement('input', { type: 'range', value: this.state.size, onChange: this.changeSetting.bind(this, 'size'), min: '100', max: '500' })
+                        ),
+                        _react2['default'].createElement(
+                            'div',
+                            { className: 'builder__setting' },
+                            _react2['default'].createElement(
+                                'label',
+                                null,
+                                'Thickness:'
+                            ),
+                            _react2['default'].createElement('input', { type: 'range', value: this.state.thickness, onChange: this.changeSetting.bind(this, 'thickness'), min: '3', max: '50' })
+                        ),
+                        _react2['default'].createElement(
+                            'div',
+                            { className: 'builder__setting' },
+                            _react2['default'].createElement(
+                                'label',
+                                null,
+                                'Value font size:'
+                            ),
+                            _react2['default'].createElement('input', { type: 'range', value: this.state.percentageFontSize, onChange: this.changeSetting.bind(this, 'percentageFontSize'), min: '10', max: '100' })
+                        ),
+                        _react2['default'].createElement(
+                            'div',
+                            { className: 'builder__setting' },
+                            _react2['default'].createElement(
+                                'label',
+                                null,
+                                'Label font size:'
+                            ),
+                            _react2['default'].createElement('input', { type: 'range', value: this.state.labelFontSize, onChange: this.changeSetting.bind(this, 'labelFontSize'), min: '10', max: '100' })
+                        ),
+                        _react2['default'].createElement(
+                            'div',
+                            { className: 'builder__setting' },
+                            _react2['default'].createElement(
+                                'label',
+                                null,
+                                'Primary colour:'
+                            ),
+                            _react2['default'].createElement('input', { type: 'color', value: this.state.primaryColour, onChange: this.changeSetting.bind(this, 'primaryColour') })
+                        ),
+                        _react2['default'].createElement(
+                            'div',
+                            { className: 'builder__setting' },
+                            _react2['default'].createElement(
+                                'label',
+                                null,
+                                'Ring colour:'
+                            ),
+                            _react2['default'].createElement('input', { type: 'color', value: this.state.ringColour, onChange: this.changeSetting.bind(this, 'ringColour') })
+                        ),
+                        _react2['default'].createElement(
+                            'div',
+                            { className: 'builder__setting' },
+                            _react2['default'].createElement(
+                                'label',
+                                null,
+                                'Label colour:'
+                            ),
+                            _react2['default'].createElement('input', { type: 'color', value: this.state.labelColour, onChange: this.changeSetting.bind(this, 'labelColour') })
+                        ),
+                        _react2['default'].createElement(
+                            'div',
+                            { className: 'builder__setting' },
+                            _react2['default'].createElement(
+                                'label',
+                                null,
+                                'Label text:'
+                            ),
+                            _react2['default'].createElement('input', { type: 'text', value: this.state.labelText, onChange: this.changeSetting.bind(this, 'labelText') })
+                        ),
+                        _react2['default'].createElement(
+                            'div',
+                            { className: 'builder__setting' },
+                            _react2['default'].createElement(
+                                'label',
+                                null,
+                                'Label position:'
+                            ),
+                            _react2['default'].createElement(
+                                'select',
+                                { value: this.state.labelPosition, onChange: this.changeSetting.bind(this, 'labelPosition') },
+                                _react2['default'].createElement(
+                                    'option',
+                                    null,
+                                    'top'
+                                ),
+                                _react2['default'].createElement(
+                                    'option',
+                                    null,
+                                    'bottom'
+                                )
+                            )
+                        ),
+                        _react2['default'].createElement(
+                            'div',
+                            { className: 'builder__setting' },
+                            _react2['default'].createElement(
+                                'label',
+                                null,
+                                'Value font weight:'
+                            ),
+                            _react2['default'].createElement(
+                                'select',
+                                { value: this.state.percentageFontWeight, onChange: this.changeSetting.bind(this, 'percentageFontWeight') },
+                                _react2['default'].createElement(
+                                    'option',
+                                    null,
+                                    'normal'
+                                ),
+                                _react2['default'].createElement(
+                                    'option',
+                                    null,
+                                    'bold'
+                                )
+                            )
+                        ),
+                        _react2['default'].createElement(
+                            'div',
+                            { className: 'builder__setting' },
+                            _react2['default'].createElement(
+                                'label',
+                                null,
+                                'Label font weight:'
+                            ),
+                            _react2['default'].createElement(
+                                'select',
+                                { value: this.state.labelFontWeight, onChange: this.changeSetting.bind(this, 'labelFontWeight') },
+                                _react2['default'].createElement(
+                                    'option',
+                                    null,
+                                    'normal'
+                                ),
+                                _react2['default'].createElement(
+                                    'option',
+                                    null,
+                                    'bold'
+                                )
+                            )
+                        )
+                    ),
+                    _react2['default'].createElement(
+                        'div',
+                        { className: 'flex-grid-col-7 builder__preview' },
+                        _react2['default'].createElement(_reactSvgDoughnut2['default'], this.state)
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Builder;
+})(_react2['default'].Component);
+
+exports['default'] = Builder;
+module.exports = exports['default'];
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9jb21wb25lbnRzL2J1aWxkZXIvYnVpbGRlci5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7O3FCQUFrQixPQUFPOzs7O2dDQUNELG9CQUFvQjs7OztJQUV0QyxPQUFPO2NBQVAsT0FBTzs7QUFDRSxhQURULE9BQU8sQ0FDRyxLQUFLLEVBQUU7OEJBRGpCLE9BQU87O0FBRUwsbUNBRkYsT0FBTyw2Q0FFQyxLQUFLLEVBQUM7QUFDWixZQUFJLENBQUMsS0FBSyxHQUFHO0FBQ1QsaUJBQUssRUFBRSxFQUFFO0FBQ1Qsa0JBQU0sRUFBRSxZQUFZO0FBQ3BCLG1CQUFPLEVBQUUsR0FBRztBQUNaLHFCQUFTLEVBQUUsRUFBRTtBQUNiLGdCQUFJLEVBQUUsR0FBRztBQUNULHlCQUFhLEVBQUUsU0FBUztBQUN4QixzQkFBVSxFQUFFLFNBQVM7QUFDckIsOEJBQWtCLEVBQUUsRUFBRTtBQUN0QixnQ0FBb0IsRUFBRSxNQUFNO0FBQzVCLHFCQUFTLEVBQUUsWUFBWTtBQUN2Qix5QkFBYSxFQUFFLFFBQVE7QUFDdkIseUJBQWEsRUFBRSxFQUFFO0FBQ2pCLDJCQUFlLEVBQUUsUUFBUTtBQUN6Qix1QkFBVyxFQUFFLFNBQVM7U0FDekIsQ0FBQTtLQUNKOztpQkFuQkMsT0FBTzs7ZUFxQkksdUJBQUMsT0FBTyxFQUFFLEtBQUssRUFBRTtBQUMxQixnQkFBTSxLQUFLLEdBQUcsS0FBSyxDQUFDLE1BQU0sQ0FBQyxLQUFLLENBQUM7QUFDakMsZ0JBQU0sS0FBSyxHQUFHLElBQUksQ0FBQyxLQUFLLENBQUM7QUFDekIsaUJBQUssQ0FBQyxPQUFPLENBQUMsR0FBRyxLQUFLLENBQUM7QUFDdkIsZ0JBQUksQ0FBQyxRQUFRLENBQUMsS0FBSyxDQUFDLENBQUM7U0FDeEI7OztlQUVLLGtCQUFHO0FBQ0wsbUJBQ0k7O2tCQUFLLFNBQVMsRUFB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LENBQUMsS0FBSyxDQUFDLGFBQWEsQUFBQyxFQUFDLFFBQVEsRUFBRSxJQUFJLENBQUMsYUFBYSxDQUFDLElBQUksQ0FBQyxJQUFJLEVBQUUsZUFBZSxDQUFDLEFBQUM7Z0NBQzlGOzs7O2lDQUFvQjtnQ0FDcEI7Ozs7aUNBQXVCOzZCQUNsQjt5QkFDUDt3QkFDTjs7OEJBQUssU0FBUyxFQUFDLGtCQUFrQjs0QkFDN0I7Ozs7NkJBQWlDOzRCQUNqQzs7a0NBQVEsS0FBSyxFQUFFLElBQUksQ0FBQyxLQUFLLENBQUMsb0JBQW9CLEFBQUMsRUFBQyxRQUFRLEVBQUUsSUFBSSxDQUFDLGFBQWEsQ0FBQyxJQUFJLENBQUMsSUFBSSxFQUFFLHNCQUFzQixDQUFDLEFBQUM7Z0NBQzVHOzs7O2lDQUF1QjtnQ0FDdkI7Ozs7aUNBQXFCOzZCQUNoQjt5QkFDUDt3QkFDTjs7OEJBQUssU0FBUyxFQUFDLGtCQUFrQjs0QkFDN0I7Ozs7NkJBQWlDOzRCQUNqQzs7a0NBQVEsS0FBSyxFQUFFLElBQUksQ0FBQyxLQUFLLENBQUMsZUFBZSxBQUFDLEVBQUMsUUFBUSxFQUFFLElBQUksQ0FBQyxhQUFhLENBQUMsSUFBSSxDQUFDLElBQUksRUFBRSxpQkFBaUIsQ0FBQyxBQUFDO2dDQUNsRzs7OztpQ0FBdUI7Z0NBQ3ZCOzs7O2lDQUFxQjs2QkFDaEI7eUJBQ1A7cUJBQ0o7b0JBQ047OzBCQUFLLFNBQVMsRUFBQyxrQ0FBa0M7d0JBQzdDLGdFQUFpQixJQUFJLENBQUMsS0FBSyxDQUFJO3FCQUM3QjtpQkFDSjthQUNKLENBQ1I7U0FDTDs7O1dBckdDLE9BQU87R0FBUyxtQkFBTSxTQUFTOztxQkF3R3RCLE9BQU8iLCJmaWxlIjoiL1VzZXJzL2RhbmllbC5vc2Jvcm5lL3JlcG9zL1JlYWN0LVNWRy1kb3VnaG51dC5naXRodWIuaW8vYXBwL2NvbXBvbmVudHMvYnVpbGRlci9idWlsZGVyLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCBTdmdEb3VnaG51dCBmcm9tICdyZWFjdC1zdmctZG91Z2hudXQnO1xuXG5jbGFzcyBCdWlsZGVyIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcbiAgICBjb25zdHJ1Y3Rvcihwcm9wcykge1xuICAgICAgICBzdXBlcihwcm9wcylcbiAgICAgICAgdGhpcy5zdGF0ZSA9IHtcbiAgICAgICAgICAgIHZhbHVlOiA3NSxcbiAgICAgICAgICAgIGZvcm1hdDogJ3BlcmNlbnRhZ2UnLFxuICAgICAgICAgICAgY2VpbGluZzogMTAwLFxuICAgICAgICAgICAgdGhpY2tuZXNzOiAxNSxcbiAgICAgICAgICAgIHNpemU6IDMwMCxcbiAgICAgICAgICAgIHByaW1hcnlDb2xvdXI6ICcjMjk4MEI5JyxcbiAgICAgICAgICAgIHJpbmdDb2xvdXI6ICcjQUFBQUFBJyxcbiAgICAgICAgICAgIHBlcmNlbnRhZ2VGb250U2l6ZTogMzUsXG4gICAgICAgICAgICBwZXJjZW50YWdlRm9udFdlaWdodDogJ2JvbGQnLFxuICAgICAgICAgICAgbGFiZWxUZXh0OiAnTGFiZWwgdGV4dCcsXG4gICAgICAgICAgICBsYWJlbFBvc2l0aW9uOiAnYm90dG9tJyxcbiAgICAgICAgICAgIGxhYmVsRm9udFNpemU6IDE4LFxuICAgICAgICAgICAgbGFiZWxGb250V2VpZ2h0OiAnbm9ybWFsJyxcbiAgICAgICAgICAgIGxhYmVsQ29sb3VyOiAnIzMzMzMzMydcbiAgICAgICAgfVxuICAgIH1cblxuICAgIGNoYW5nZVNldHRpbmcoc2V0dGluZywgZXZlbnQpIHtcbiAgICAgICAgY29uc3QgdmFsdWUgPSBldmVudC50YXJnZXQudmFsdWU7XG4gICAgICAgIGNvbnN0IHN0YXRlID0gdGhpcy5zdGF0ZTtcbiAgICAgICAgc3RhdGVbc2V0dGluZ10gPSB2YWx1ZTtcbiAgICAgICAgdGhpcy5zZXRTdGF0ZShzdGF0ZSk7XG4gICAgfVxuXG4gICAgcmVuZGVyKCkge1xuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJidWlsZGVyIGNvbnRhaW5lclwiPlxuICAgICAgICAgICAgICAgIDxoMz5CdWlsZCB5b3VyIG93bjwvaDM+XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4LWdyaWQtcm93XCI+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleC1ncmlkLWNvbC01XCI+XG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJ1aWxkZXJfX3NldHRpbmdcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8bGFiZWw+Rm9ybWF0OjwvbGFiZWw+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNlbGVjdCB2YWx1ZT17dGhpcy5zdGF0ZS5mb3JtYXR9IG9uQ2hhbmdlPXt0aGlzLmNoYW5nZVNldHRpbmcuYmluZCh0aGlzLCAnZm9ybWF0Jyl9PlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8b3B0aW9uPnBlcmNlbnRhZ2U8L29wdGlvbj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPG9wdGlvbj5mcmFjdGlvbjwvb3B0aW9uPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvc2VsZWN0PlxuICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJ1aWxkZXJfX3NldHRpbmdcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8bGFiZWw+VmFsdWU6PC9sYWJlbD48aW5wdXQgdHlwZT1cInJhbmdlXCIgdmFsdWU9e3RoaXMuc3RhdGUudmFsdWV9IG9uQ2hhbmdlPXt0aGlzLmNoYW5nZVNldHRpbmcuYmluZCh0aGlzLCAndmFsdWUnKX0gbWluPVwiMFwiIG1heD17dGhpcy5zdGF0ZS5jZWlsaW5nfS8+XG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnN0YXRlLmZvcm1hdCA9PT0gJ2ZyYWN0aW9uJyAmJiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJ1aWxkZXJfX3NldHRpbmdcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGxhYmVsPkNlaWxpbmc6PC9sYWJlbD48aW5wdXQgdHlwZT1cInJhbmdlXCIgdmFsdWU9e3RoaXMuc3RhdGUuY2VpbGluZ30gb25DaGFuZ2U9e3RoaXMuY2hhbmdlU2V0dGluZy5iaW5kKHRoaXMsICdjZWlsaW5nJyl9IG1pbj1cIjFcIiBtYXg9XCI1MDBcIi8+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJ1aWxkZXJfX3NldHRpbmdcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8bGFiZWw+U2l6ZTo8L2xhYmVsPjxpbnB1dCB0eXBlPVwicmFuZ2VcIiB2YWx1ZT17dGhpcy5zdGF0ZS5zaXplfSBvbkNoYW5nZT17dGhpcy5jaGFuZ2VTZXR0aW5nLmJpbmQodGhpcywgJ3NpemUnKX0gbWluPVwiMTAwXCIgbWF4PVwiNTAwXCIvPlxuICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJ1aWxkZXJfX3NldHRpbmdcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8bGFiZWw+VGhpY2tuZXNzOjwvbGFiZWw+PGlucHV0IHR5cGU9XCJyYW5nZVwiIHZhbHVlPXt0aGlzLnN0YXRlLnRoaWNrbmVzc30gb25DaGFuZ2U9e3RoaXMuY2hhbmdlU2V0dGluZy5iaW5kKHRoaXMsICd0aGlja25lc3MnKX0gbWluPVwiM1wiIG1heD1cIjUwXCIvPlxuICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJ1aWxkZXJfX3NldHRpbmdcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8bGFiZWw+VmFsdWUgZm9udCBzaXplOjwvbGFiZWw+PGlucHV0IHR5cGU9XCJyYW5nZVwiIHZhbHVlPXt0aGlzLnN0YXRlLnBlcmNlbnRhZ2VGb250U2l6ZX0gb25DaGFuZ2U9e3RoaXMuY2hhbmdlU2V0dGluZy5iaW5kKHRoaXMsICdwZXJjZW50YWdlRm9udFNpemUnKX0gbWluPVwiMTBcIiBtYXg9XCIxMDBcIi8+XG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYnVpbGRlcl9fc2V0dGluZ1wiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxsYWJlbD5MYWJlbCBmb250IHNpemU6PC9sYWJlbD48aW5wdXQgdHlwZT1cInJhbmdlXCIgdmFsdWU9e3RoaXMuc3RhdGUubGFiZWxGb250U2l6ZX0gb25DaGFuZ2U9e3RoaXMuY2hhbmdlU2V0dGluZy5iaW5kKHRoaXMsICdsYWJlbEZvbnRTaXplJyl9IG1pbj1cIjEwXCIgbWF4PVwiMTAwXCIvPlxuICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJ1aWxkZXJfX3NldHRpbmdcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8bGFiZWw+UHJpbWFyeSBjb2xvdXI6PC9sYWJlbD48aW5wdXQgdHlwZT1cImNvbG9yXCIgdmFsdWU9e3RoaXMuc3RhdGUucHJpbWFyeUNvbG91cn0gb25DaGFuZ2U9e3RoaXMuY2hhbmdlU2V0dGluZy5iaW5kKHRoaXMsICdwcmltYXJ5Q29sb3VyJyl9Lz5cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJidWlsZGVyX19zZXR0aW5nXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGxhYmVsPlJpbmcgY29sb3VyOjwvbGFiZWw+PGlucHV0IHR5cGU9XCJjb2xvclwiIHZhbHVlPXt0aGlzLnN0YXRlLnJpbmdDb2xvdXJ9IG9uQ2hhbmdlPXt0aGlzLmNoYW5nZVNldHRpbmcuYmluZCh0aGlzLCAncmluZ0NvbG91cicpfS8+XG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYnVpbGRlcl9fc2V0dGluZ1wiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxsYWJlbD5MYWJlbCBjb2xvdXI6PC9sYWJlbD48aW5wdXQgdHlwZT1cImNvbG9yXCIgdmFsdWU9e3RoaXMuc3RhdGUubGFiZWxDb2xvdXJ9IG9uQ2hhbmdlPXt0aGlzLmNoYW5nZVNldHRpbmcuYmluZCh0aGlzLCAnbGFiZWxDb2xvdXInKX0vPlxuICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJ1aWxkZXJfX3NldHRpbmdcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8bGFiZWw+TGFiZWwgdGV4dDo8L2xhYmVsPjxpbnB1dCB0eXBlPVwidGV4dFwiIHZhbHVlPXt0aGlzLnN0YXRlLmxhYmVsVGV4dH0gb25DaGFuZ2U9e3RoaXMuY2hhbmdlU2V0dGluZy5iaW5kKHRoaXMsICdsYWJlbFRleHQnKX0vPlxuICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJ1aWxkZXJfX3NldHRpbmdcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8bGFiZWw+TGFiZWwgcG9zaXRpb246PC9sYWJlbD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c2VsZWN0IHZhbHVlPXt0aGlzLnN0YXRlLmxhYmVsUG9zaXRpb259IG9uQ2hhbmdlPXt0aGlzLmNoYW5nZVNldHRpbmcuYmluZCh0aGlzLCAnbGFiZWxQb3NpdGlvbicpfT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPG9wdGlvbj50b3A8L29wdGlvbj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPG9wdGlvbj5ib3R0b208L29wdGlvbj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3NlbGVjdD5cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJidWlsZGVyX19zZXR0aW5nXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGxhYmVsPlZhbHVlIGZvbnQgd2VpZ2h0OjwvbGFiZWw+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNlbGVjdCB2YWx1ZT17dGhpcy5zdGF0ZS5wZXJjZW50YWdlRm9udFdlaWdodH0gb25DaGFuZ2U9e3RoaXMuY2hhbmdlU2V0dGluZy5iaW5kKHRoaXMsICdwZXJjZW50YWdlRm9udFdlaWdodCcpfT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPG9wdGlvbj5ub3JtYWw8L29wdGlvbj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPG9wdGlvbj5ib2xkPC9vcHRpb24+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9zZWxlY3Q+XG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYnVpbGRlcl9fc2V0dGluZ1wiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxsYWJlbD5MYWJlbCBmb250IHdlaWdodDo8L2xhYmVsPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzZWxlY3QgdmFsdWU9e3RoaXMuc3RhdGUubGFiZWxGb250V2VpZ2h0fSBvbkNoYW5nZT17dGhpcy5jaGFuZ2VTZXR0aW5nLmJpbmQodGhpcywgJ2xhYmVsRm9udFdlaWdodCcpfT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPG9wdGlvbj5ub3JtYWw8L29wdGlvbj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPG9wdGlvbj5ib2xkPC9vcHRpb24+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9zZWxlY3Q+XG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleC1ncmlkLWNvbC03IGJ1aWxkZXJfX3ByZXZpZXdcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxTdmdEb3VnaG51dCB7Li4udGhpcy5zdGF0ZX0gLz5cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgKTtcbiAgICB9XG59XG5cbmV4cG9ydCBkZWZhdWx0IEJ1aWxkZXI7XG4iXX0=
+},{"react":40,"react-svg-doughnut":31}],2:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+    value: true
+});
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
 var _settingsJson = require('./settings.json');
 
 var _settingsJson2 = _interopRequireDefault(_settingsJson);
@@ -160,7 +444,7 @@ var Configuration = (function (_React$Component) {
 exports['default'] = Configuration;
 module.exports = exports['default'];
 //# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9jb21wb25lbnRzL2NvbmZpZ3VyYXRpb24vY29uZmlndXJhdGlvbi5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7O3FCQUFrQixPQUFPOzs7OzRCQUNKLGlCQUFpQjs7OztJQUVoQyxhQUFhO2NBQWIsYUFBYTs7YUFBYixhQUFhOzhCQUFiLGFBQWE7O21DQUFiLGFBQWE7OztpQkFBYixhQUFhOztlQUNULGtCQUFHO0FBQ0wsbUJBQ0k7O2tCQUFLLFNBQVMsRUFBQyx5QkFBeUI7Z0JBQ3BDOzs7O2lCQUFzQjtnQkFDdEI7Ozs7aUJBQXdFO2dCQUN4RTs7c0JBQUssU0FBUyxFQUFDLHdDQUF3QztvQkFDbkQ7OzBCQUFLLFNBQVMsRUFBQywyQ0FBMkM7d0JBQUM7Ozs0QkFBRzs7Ozs2QkFBd0I7eUJBQUk7cUJBQU07b0JBQ2hHOzswQkFBSyxTQUFTLEVBQUMsMkNBQTJDO3dCQUFDOzs7NEJBQUc7Ozs7NkJBQXFCO3lCQUFJO3FCQUFNO29CQUM3Rjs7MEJBQUssU0FBUyxFQUFDLDJDQUEyQzt3QkFBQzs7OzRCQUFHOzs7OzZCQUE4Qjt5QkFBSTtxQkFBTTtvQkFDdEc7OzBCQUFLLFNBQVMsRUFBQywyQ0FBMkM7d0JBQUM7Ozs0QkFBRzs7Ozs2QkFBNEI7eUJBQUk7cUJBQU07aUJBQ2xHO2dCQUNMLDBCQUFTLEdBQUcsQ0FBQyxVQUFDLElBQUksRUFBRSxLQUFLLEVBQUs7QUFDM0IsMkJBQ0k7OzBCQUFLLFNBQVMsRUFBQyx3Q0FBd0MsRUFBQyxHQUFHLEVBQUUsS0FBSyxBQUFDO3dCQUMvRDs7OEJBQUssU0FBUyxFQUFDLDJDQUEyQzs0QkFBQzs7O2dDQUFHOzs7b0NBQVMsSUFBSSxDQUFDLE9BQU87aUNBQVU7NkJBQUk7eUJBQU07d0JBQ3ZHOzs4QkFBSyxTQUFTLEVBQUMsMkNBQTJDOzRCQUFDOzs7Z0NBQUksSUFBSSxDQUFDLElBQUk7NkJBQUs7eUJBQU07d0JBQ25GOzs4QkFBSyxTQUFTLEVBQUMsMkNBQTJDOzRCQUFDOzs7Z0NBQUksSUFBSSxDQUFDLFlBQVk7NkJBQUs7eUJBQU07d0JBQzNGOzs4QkFBSyxTQUFTLEVBQUMsMkNBQTJDOzRCQUFDOzs7Z0NBQUksSUFBSSxDQUFDLFdBQVc7NkJBQUs7eUJBQU07cUJBQ3hGLENBQ1I7aUJBQ0wsQ0FBQzthQUNBLENBQ1I7U0FDTDs7O1dBeEJDLGFBQWE7R0FBUyxtQkFBTSxTQUFTOztxQkEyQjVCLGFBQWEiLCJmaWxlIjoiL1VzZXJzL2RhbmllbC5vc2Jvcm5lL3JlcG9zL1JlYWN0LVNWRy1kb3VnaG51dC5naXRodWIuaW8vYXBwL2NvbXBvbmVudHMvY29uZmlndXJhdGlvbi9jb25maWd1cmF0aW9uLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCBzZXR0aW5ncyBmcm9tICcuL3NldHRpbmdzLmpzb24nO1xuXG5jbGFzcyBDb25maWd1cmF0aW9uIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcbiAgICByZW5kZXIoKSB7XG4gICAgICAgIHJldHVybiAoXG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbmZpZ3VyYXRpb24gY29udGFpbmVyXCI+XG4gICAgICAgICAgICAgICAgPGgzPkNvbmZpZ3VyYXRpb248L2gzPlxuICAgICAgICAgICAgICAgIDxwPlJlYWN0IFNWRyBkb3VnaG51dCB1c2VzIHRoZSBmb2xsb3dpbmcgcHJvcHMgdG8gYnVpbGQgdGhlIGdyYXBoaWMuPC9wPlxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleC1ncmlkLXJvdyBjb25maWd1cmF0aW9uX190YWJsZS1yb3dcIj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4LWdyaWQtY29sLTQgY29uZmlndXJhdGlvbl9fdGFibGUtY2VsbFwiPjxwPjxzdHJvbmc+U2V0dGluZzwvc3Ryb25nPjwvcD48L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4LWdyaWQtY29sLTIgY29uZmlndXJhdGlvbl9fdGFibGUtY2VsbFwiPjxwPjxzdHJvbmc+VHlwZTwvc3Ryb25nPjwvcD48L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4LWdyaWQtY29sLTIgY29uZmlndXJhdGlvbl9fdGFibGUtY2VsbFwiPjxwPjxzdHJvbmc+RGVmYXVsdCB2YWx1ZTwvc3Ryb25nPjwvcD48L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4LWdyaWQtY29sLTQgY29uZmlndXJhdGlvbl9fdGFibGUtY2VsbFwiPjxwPjxzdHJvbmc+RGVzY3JpcHRpb248L3N0cm9uZz48L3A+PC9kaXY+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAge3NldHRpbmdzLm1hcCgoZGF0YSwgaW5kZXgpID0+IHtcbiAgICAgICAgICAgICAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleC1ncmlkLXJvdyBjb25maWd1cmF0aW9uX190YWJsZS1yb3dcIiBrZXk9e2luZGV4fT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXgtZ3JpZC1jb2wtNCBjb25maWd1cmF0aW9uX190YWJsZS1jZWxsXCI+PHA+PHN0cm9uZz57ZGF0YS5zZXR0aW5nfTwvc3Ryb25nPjwvcD48L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXgtZ3JpZC1jb2wtMiBjb25maWd1cmF0aW9uX190YWJsZS1jZWxsXCI+PHA+e2RhdGEudHlwZX08L3A+PC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4LWdyaWQtY29sLTIgY29uZmlndXJhdGlvbl9fdGFibGUtY2VsbFwiPjxwPntkYXRhLmRlZmF1bHRWYWx1ZX08L3A+PC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4LWdyaWQtY29sLTQgY29uZmlndXJhdGlvbl9fdGFibGUtY2VsbFwiPjxwPntkYXRhLmRlc2NyaXB0aW9ufTwvcD48L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICApO1xuICAgICAgICAgICAgICAgIH0pfVxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICk7XG4gICAgfVxufVxuXG5leHBvcnQgZGVmYXVsdCBDb25maWd1cmF0aW9uO1xuIl19
-},{"./settings.json":2,"react":39}],2:[function(require,module,exports){
+},{"./settings.json":3,"react":40}],3:[function(require,module,exports){
 module.exports=[{
     "setting": "value",
     "type": "Number",
@@ -233,7 +517,7 @@ module.exports=[{
     "description": "The format displayed. 'percentage' or 'fraction'"
 }]
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -300,7 +584,7 @@ var Footer = (function (_React$Component) {
 exports['default'] = Footer;
 module.exports = exports['default'];
 //# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9jb21wb25lbnRzL2Zvb3Rlci9mb290ZXIuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7OztxQkFBa0IsT0FBTzs7Ozt1REFDTCx1REFBdUQ7Ozs7QUFDM0UsSUFBTSxTQUFTLEdBQUcsK0NBQStDLENBQUM7O0lBRTVELE1BQU07Y0FBTixNQUFNOzthQUFOLE1BQU07OEJBQU4sTUFBTTs7bUNBQU4sTUFBTTs7O2lCQUFOLE1BQU07O2VBQ0Ysa0JBQUc7QUFDTCxtQkFDSTs7a0JBQUssU0FBUyxFQUFDLFFBQVE7Z0JBQ25COztzQkFBSyxTQUFTLEVBQUMsV0FBVztvQkFDdEI7Ozs7d0JBQU0scURBQVEsT0FBTztxQkFBSztvQkFDMUI7OzBCQUFHLElBQUksRUFBRSxTQUFTLEFBQUM7O3FCQUFXO2lCQUM1QjthQUNKLENBQ1I7U0FDTDs7O1dBVkMsTUFBTTtHQUFTLG1CQUFNLFNBQVM7O3FCQWFyQixNQUFNIiwiZmlsZSI6Ii9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9jb21wb25lbnRzL2Zvb3Rlci9mb290ZXIuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0IFBhY2thZ2UgZnJvbSAnLi4vLi4vLi4vbm9kZV9tb2R1bGVzL3JlYWN0LXN2Zy1kb3VnaG51dC9wYWNrYWdlLmpzb24nO1xuY29uc3QgR2l0aHViVXJsID0gJ2h0dHBzOi8vZ2l0aHViLmNvbS9kYW5ueW96L3JlYWN0LXN2Zy1kb3VnaG51dCc7XG5cbmNsYXNzIEZvb3RlciBleHRlbmRzIFJlYWN0LkNvbXBvbmVudCB7XG4gICAgcmVuZGVyKCkge1xuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmb290ZXJcIj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lclwiPlxuICAgICAgICAgICAgICAgICAgICA8cD52IHtQYWNrYWdlLnZlcnNpb259PC9wPlxuICAgICAgICAgICAgICAgICAgICA8YSBocmVmPXtHaXRodWJVcmx9PkdpdGh1YjwvYT5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICApO1xuICAgIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgRm9vdGVyO1xuIl19
-},{"../../../node_modules/react-svg-doughnut/package.json":29,"react":39}],4:[function(require,module,exports){
+},{"../../../node_modules/react-svg-doughnut/package.json":30,"react":40}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -315,7 +599,7 @@ exports.largeExample = largeExample;
 var example1 = "<code><span class=\"pl-k\">import</span> <span class=\"pl-smi\">React</span> <span class=\"pl-k\">from</span> <span class=\"pl-s\"><span class=\"pl-pds\">'</span>react<span class=\"pl-pds\">'</span></span>;\n<span class=\"pl-k\">import</span> <span class=\"pl-smi\">ReactDOM</span> <span class=\"pl-k\">from</span> <span class=\"pl-s\"><span class=\"pl-pds\">'</span>react-dom<span class=\"pl-pds\">'</span></span>;\n<span class=\"pl-k\">import</span> <span class=\"pl-smi\">SvgDoughnut</span> <span class=\"pl-k\">from</span> <span class=\"pl-s\"><span class=\"pl-pds\">'</span>react-svg-doughnut<span class=\"pl-pds\">'</span></span>;\n\n<span class=\"pl-k\">class</span> <span class=\"pl-en\">Example</span> <span class=\"pl-k\">extends</span> <span class=\"pl-e\">React</span>.<span class=\"pl-smi\">Component</span> {\n    <span class=\"pl-en\">render</span>() {\n        <span class=\"pl-k\">const</span> <span class=\"pl-c1\">settings</span> <span class=\"pl-k\">=</span> {\n            value<span class=\"pl-k\">:</span> <span class=\"pl-c1\">100</span>,\n            labelText<span class=\"pl-k\">:</span> <span class=\"pl-s\"><span class=\"pl-pds\">'</span>Awesome!<span class=\"pl-pds\">'</span></span>,\n            size<span class=\"pl-k\">:</span> <span class=\"pl-c1\">180</span>,\n            thickness<span class=\"pl-k\">:</span> <span class=\"pl-c1\">5</span>,\n            animationDuration<span class=\"pl-k\">:</span> <span class=\"pl-c1\">1000</span>\n        };\n\n        <span class=\"pl-k\">return</span>(\n            <span class=\"pl-k\">&lt;</span>div className<span class=\"pl-k\">=</span><span class=\"pl-s\"><span class=\"pl-pds\">\"</span>home<span class=\"pl-pds\">\"</span></span><span class=\"pl-k\">&gt;</span>\n                <span class=\"pl-k\">&lt;</span>SvgDoughnut {<span class=\"pl-k\">...</span>settings}<span class=\"pl-k\">/</span><span class=\"pl-k\">&gt;</span>\n            <span class=\"pl-k\">&lt;</span><span class=\"pl-k\">/</span>div<span class=\"pl-k\">&gt;</span>\n        );\n    }\n};\n\n<span class=\"pl-smi\">ReactDOM</span>.<span class=\"pl-en\">render</span>(\n    <span class=\"pl-k\">&lt;</span>Example <span class=\"pl-k\">/</span><span class=\"pl-k\">&gt;</span>,\n    <span class=\"pl-c1\">document</span>.<span class=\"pl-c1\">getElementById</span>(<span class=\"pl-s\"><span class=\"pl-pds\">'</span>app<span class=\"pl-pds\">'</span></span>)\n);</code>";
 exports.example1 = example1;
 //# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9jb21wb25lbnRzL2luc3RhbGxhdGlvbi9leGFtcGxlLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7O0FBQU8sSUFBTSxZQUFZLCsxQ0FNcUIsQ0FBQzs7O0FBRXhDLElBQU0sWUFBWSxpMkdBeUJqQixDQUFDOzs7QUFFRixJQUFNLFFBQVEsODNFQXlCWCxDQUFDIiwiZmlsZSI6Ii9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9jb21wb25lbnRzL2luc3RhbGxhdGlvbi9leGFtcGxlLmpzIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGNvbnN0IHNtYWxsRXhhbXBsZSA9IGA8Y29kZT48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPiZsdDs8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2t3ZFwiPlN2Z0RvdWdobnV0PC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9fYXR0clwiPnBlcmNlbnRhZ2U8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2VxdVwiPj08L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj57PC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19pbnRcIj4xMDA8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj59PC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9fYXR0clwiPmxhYmVsPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19lcXVcIj49PC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+ezwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fc3RyXCI+J0F3ZXNvbWUhJzwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPn08L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19hdHRyXCI+c2V0dGluZ3M8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2VxdVwiPj08L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj57ezwvc3Bhbj5cbiAgICA8c3BhbiBjbGFzcz1cImpzeF9fa2V5XCI+c2l6ZTwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY29sb25cIj46PC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9faW50XCI+MjAwPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+LDwvc3Bhbj5cbiAgICA8c3BhbiBjbGFzcz1cImpzeF9fa2V5XCI+dGhpY2tuZXNzPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jb2xvblwiPjo8L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19pbnRcIj41PC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+LDwvc3Bhbj5cbiAgICA8c3BhbiBjbGFzcz1cImpzeF9fa2V5XCI+cGF0aENvbG9yPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jb2xvblwiPjo8L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19zdHJcIj4ncmdiKDIzMSwgODMsIDc5KSc8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj4sPC9zcGFuPlxuICAgIDxzcGFuIGNsYXNzPVwianN4X19rZXlcIj5jaXJjbGVDb2xvcjwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY29sb25cIj46PC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9fc3RyXCI+J3JnYmEoMCwgMCwgMCwgMC4xNSknPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+LDwvc3Bhbj5cbiAgICA8c3BhbiBjbGFzcz1cImpzeF9fa2V5XCI+YW5pbWF0aW9uRHVyYXRpb248L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NvbG9uXCI+Ojwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX2ludFwiPjEwMDA8L3NwYW4+XG48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPn19LyZndDs8L3NwYW4+PC9jb2RlPmA7XG5cbmV4cG9ydCBjb25zdCBsYXJnZUV4YW1wbGUgPSBgPGNvZGU+PHNwYW4gY2xhc3M9XCJqc3hfX2t3ZFwiPmltcG9ydDwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX3ZhclwiPlJlYWN0PC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9fa3dkXCI+ZnJvbTwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX3N0clwiPidyZWFjdCc8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj47PC9zcGFuPlxuPHNwYW4gY2xhc3M9XCJqc3hfX2t3ZFwiPmltcG9ydDwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX3ZhclwiPlJlYWN0RE9NPC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9fa3dkXCI+ZnJvbTwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX3N0clwiPidyZWFjdC1kb20nPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+Ozwvc3Bhbj5cbjxzcGFuIGNsYXNzPVwianN4X19rd2RcIj5pbXBvcnQ8L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X192YXJcIj5TdmdEb3VnaG51dDwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX2t3ZFwiPmZyb208L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19zdHJcIj4ncmVhY3Qtc3ZnLWRvdWdobnV0Jzwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPjs8L3NwYW4+XG5cbjxzcGFuIGNsYXNzPVwianN4X19pbnRcIj5jbGFzczwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX2F0dHJcIj5FeGFtcGxlPC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9faW50XCI+ZXh0ZW5kczwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX2F0dHJcIj5SZWFjdDwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPi48L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2F0dHJcIj5Db21wb25lbnQ8L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+ezwvc3Bhbj5cbiAgICA8c3BhbiBjbGFzcz1cImpzeF9fYXR0clwiPnJlbmRlcjwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPigpIHs8L3NwYW4+XG4gICAgICAgIDxzcGFuIGNsYXNzPVwianN4X19hdHRyXCI+cmV0dXJuPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+KDwvc3Bhbj5cbiAgICAgICAgICAgIDxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+Jmx0Ozwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fa3dkXCI+ZGl2PC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+Jmd0PC9zcGFuPlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+Jmx0Ozwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fa3dkXCI+U3ZnRG91Z2hudXQ8L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19hdHRyXCI+cGVyY2VudGFnZTwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fZXF1XCI+PTwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPns8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2ludFwiPjEwMDwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPn08L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19hdHRyXCI+c2V0dGluZ3M8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2VxdVwiPj08L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj57ezwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9XCJqc3hfX2tleVwiPmxhYmVsVGV4dDwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY29sb25cIj46PC9zcGFuPiA8c3BhbiBjbGFzcz1cImpzeF9fc3RyXCI+J0F3ZXNvbWUhJzwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPiw8L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPVwianN4X19rZXlcIj5zaXplPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jb2xvblwiPjo8L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19pbnRcIj4yMDA8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj4sPC9zcGFuPlxuICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz1cImpzeF9fa2V5XCI+dGhpY2tuZXNzPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jb2xvblwiPjo8L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19pbnRcIj41PC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+LDwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9XCJqc3hfX2tleVwiPnByaW1hcnlDb2xvdXI8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NvbG9uXCI+Ojwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX3N0clwiPidyZ2IoMjMxLCA4MywgNzkpJzwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPiw8L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPVwianN4X19rZXlcIj5yaW5nQ29sb3VyPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jb2xvblwiPjo8L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19zdHJcIj4ncmdiYSgwLCAwLCAwLCAwLjE1KSc8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj4sPC9zcGFuPlxuICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz1cImpzeF9fa2V5XCI+YW5pbWF0aW9uRHVyYXRpb248L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NvbG9uXCI+Ojwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJqc3hfX2ludFwiPjEwMDA8L3NwYW4+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj59fS8mZ3Q7PC9zcGFuPlxuICAgICAgICAgICAgPHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj4mbHQ7Lzwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fa3dkXCI+ZGl2PC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+Jmd0PC9zcGFuPlxuICAgICAgICA8c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPik7PC9zcGFuPlxuICAgIDxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+fTwvc3Bhbj5cbjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+fTs8L3NwYW4+XG5cbjxzcGFuIGNsYXNzPVwianN4X19hdHRyXCI+UmVhY3RET008L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2NoYXJcIj4uPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19hdHRyXCI+cmVuZGVyPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+KDwvc3Bhbj5cbiAgICA8c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPiZsdDs8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2t3ZFwiPkV4YW1wbGU8L3NwYW4+IDxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+LyZndCw8L3NwYW4+XG4gICAgPHNwYW4gY2xhc3M9XCJqc3hfX2F0dHJcIj5kb2N1bWVudDwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPi48L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX2F0dHJcIj5nZXRFbGVtZW50QnlJZDwvc3Bhbj48c3BhbiBjbGFzcz1cImpzeF9fY2hhclwiPig8L3NwYW4+PHNwYW4gY2xhc3M9XCJqc3hfX3N0clwiPidhcHAnPC9zcGFuPjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+KTwvc3Bhbj5cbjxzcGFuIGNsYXNzPVwianN4X19jaGFyXCI+KTs8L3NwYW4+XG48L2NvZGU+YDtcblxuZXhwb3J0IGNvbnN0IGV4YW1wbGUxID0gYDxjb2RlPjxzcGFuIGNsYXNzPVwicGwta1wiPmltcG9ydDwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJwbC1zbWlcIj5SZWFjdDwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJwbC1rXCI+ZnJvbTwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJwbC1zXCI+PHNwYW4gY2xhc3M9XCJwbC1wZHNcIj4nPC9zcGFuPnJlYWN0PHNwYW4gY2xhc3M9XCJwbC1wZHNcIj4nPC9zcGFuPjwvc3Bhbj47XG48c3BhbiBjbGFzcz1cInBsLWtcIj5pbXBvcnQ8L3NwYW4+IDxzcGFuIGNsYXNzPVwicGwtc21pXCI+UmVhY3RET008L3NwYW4+IDxzcGFuIGNsYXNzPVwicGwta1wiPmZyb208L3NwYW4+IDxzcGFuIGNsYXNzPVwicGwtc1wiPjxzcGFuIGNsYXNzPVwicGwtcGRzXCI+Jzwvc3Bhbj5yZWFjdC1kb208c3BhbiBjbGFzcz1cInBsLXBkc1wiPic8L3NwYW4+PC9zcGFuPjtcbjxzcGFuIGNsYXNzPVwicGwta1wiPmltcG9ydDwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJwbC1zbWlcIj5TdmdEb3VnaG51dDwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJwbC1rXCI+ZnJvbTwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJwbC1zXCI+PHNwYW4gY2xhc3M9XCJwbC1wZHNcIj4nPC9zcGFuPnJlYWN0LXN2Zy1kb3VnaG51dDxzcGFuIGNsYXNzPVwicGwtcGRzXCI+Jzwvc3Bhbj48L3NwYW4+O1xuXG48c3BhbiBjbGFzcz1cInBsLWtcIj5jbGFzczwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJwbC1lblwiPkV4YW1wbGU8L3NwYW4+IDxzcGFuIGNsYXNzPVwicGwta1wiPmV4dGVuZHM8L3NwYW4+IDxzcGFuIGNsYXNzPVwicGwtZVwiPlJlYWN0PC9zcGFuPi48c3BhbiBjbGFzcz1cInBsLXNtaVwiPkNvbXBvbmVudDwvc3Bhbj4ge1xuICAgIDxzcGFuIGNsYXNzPVwicGwtZW5cIj5yZW5kZXI8L3NwYW4+KCkge1xuICAgICAgICA8c3BhbiBjbGFzcz1cInBsLWtcIj5jb25zdDwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJwbC1jMVwiPnNldHRpbmdzPC9zcGFuPiA8c3BhbiBjbGFzcz1cInBsLWtcIj49PC9zcGFuPiB7XG4gICAgICAgICAgICB2YWx1ZTxzcGFuIGNsYXNzPVwicGwta1wiPjo8L3NwYW4+IDxzcGFuIGNsYXNzPVwicGwtYzFcIj4xMDA8L3NwYW4+LFxuICAgICAgICAgICAgbGFiZWxUZXh0PHNwYW4gY2xhc3M9XCJwbC1rXCI+Ojwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJwbC1zXCI+PHNwYW4gY2xhc3M9XCJwbC1wZHNcIj4nPC9zcGFuPkF3ZXNvbWUhPHNwYW4gY2xhc3M9XCJwbC1wZHNcIj4nPC9zcGFuPjwvc3Bhbj4sXG4gICAgICAgICAgICBzaXplPHNwYW4gY2xhc3M9XCJwbC1rXCI+Ojwvc3Bhbj4gPHNwYW4gY2xhc3M9XCJwbC1jMVwiPjE4MDwvc3Bhbj4sXG4gICAgICAgICAgICB0aGlja25lc3M8c3BhbiBjbGFzcz1cInBsLWtcIj46PC9zcGFuPiA8c3BhbiBjbGFzcz1cInBsLWMxXCI+NTwvc3Bhbj4sXG4gICAgICAgICAgICBhbmltYXRpb25EdXJhdGlvbjxzcGFuIGNsYXNzPVwicGwta1wiPjo8L3NwYW4+IDxzcGFuIGNsYXNzPVwicGwtYzFcIj4xMDAwPC9zcGFuPlxuICAgICAgICB9O1xuXG4gICAgICAgIDxzcGFuIGNsYXNzPVwicGwta1wiPnJldHVybjwvc3Bhbj4oXG4gICAgICAgICAgICA8c3BhbiBjbGFzcz1cInBsLWtcIj4mbHQ7PC9zcGFuPmRpdiBjbGFzc05hbWU8c3BhbiBjbGFzcz1cInBsLWtcIj49PC9zcGFuPjxzcGFuIGNsYXNzPVwicGwtc1wiPjxzcGFuIGNsYXNzPVwicGwtcGRzXCI+XCI8L3NwYW4+aG9tZTxzcGFuIGNsYXNzPVwicGwtcGRzXCI+XCI8L3NwYW4+PC9zcGFuPjxzcGFuIGNsYXNzPVwicGwta1wiPiZndDs8L3NwYW4+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9XCJwbC1rXCI+Jmx0Ozwvc3Bhbj5TdmdEb3VnaG51dCB7PHNwYW4gY2xhc3M9XCJwbC1rXCI+Li4uPC9zcGFuPnNldHRpbmdzfTxzcGFuIGNsYXNzPVwicGwta1wiPi88L3NwYW4+PHNwYW4gY2xhc3M9XCJwbC1rXCI+Jmd0Ozwvc3Bhbj5cbiAgICAgICAgICAgIDxzcGFuIGNsYXNzPVwicGwta1wiPiZsdDs8L3NwYW4+PHNwYW4gY2xhc3M9XCJwbC1rXCI+Lzwvc3Bhbj5kaXY8c3BhbiBjbGFzcz1cInBsLWtcIj4mZ3Q7PC9zcGFuPlxuICAgICAgICApO1xuICAgIH1cbn07XG5cbjxzcGFuIGNsYXNzPVwicGwtc21pXCI+UmVhY3RET008L3NwYW4+LjxzcGFuIGNsYXNzPVwicGwtZW5cIj5yZW5kZXI8L3NwYW4+KFxuICAgIDxzcGFuIGNsYXNzPVwicGwta1wiPiZsdDs8L3NwYW4+RXhhbXBsZSA8c3BhbiBjbGFzcz1cInBsLWtcIj4vPC9zcGFuPjxzcGFuIGNsYXNzPVwicGwta1wiPiZndDs8L3NwYW4+LFxuICAgIDxzcGFuIGNsYXNzPVwicGwtYzFcIj5kb2N1bWVudDwvc3Bhbj4uPHNwYW4gY2xhc3M9XCJwbC1jMVwiPmdldEVsZW1lbnRCeUlkPC9zcGFuPig8c3BhbiBjbGFzcz1cInBsLXNcIj48c3BhbiBjbGFzcz1cInBsLXBkc1wiPic8L3NwYW4+YXBwPHNwYW4gY2xhc3M9XCJwbC1wZHNcIj4nPC9zcGFuPjwvc3Bhbj4pXG4pOzwvY29kZT5gO1xuIl19
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -406,7 +690,7 @@ var Installation = (function (_React$Component) {
 exports['default'] = Installation;
 module.exports = exports['default'];
 //# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9jb21wb25lbnRzL2luc3RhbGxhdGlvbi9pbnN0YWxsYXRpb24uanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7OztxQkFBa0IsT0FBTzs7Ozt1QkFDYyxXQUFXOztBQUVsRCxTQUFTLFlBQVksR0FBRztBQUNwQixXQUFPLEVBQUMsTUFBTSxtQkFBVSxFQUFDLENBQUM7Q0FDN0IsQ0FBQzs7SUFFSSxZQUFZO2NBQVosWUFBWTs7YUFBWixZQUFZOzhCQUFaLFlBQVk7O21DQUFaLFlBQVk7OztpQkFBWixZQUFZOztlQUNSLGtCQUFHO0FBQ0wsbUJBQ0k7O2tCQUFLLFNBQVMsRUFBQyx3QkFBd0I7Z0JBQ25DOzs7O2lCQUFxQjtnQkFDckI7Ozs7aUJBQXNEO2dCQUN0RDs7c0JBQUssU0FBUyxFQUFDLEtBQUs7b0JBQUM7OzBCQUFNLFNBQVMsRUFBQyxXQUFXOztxQkFBcUM7aUJBQU07Z0JBQzNGOzs7O2lCQUFrQjtnQkFDbEI7O3NCQUFLLFNBQVMsRUFBQyxLQUFLO29CQUFDOzswQkFBTSxTQUFTLEVBQUMsV0FBVzs7cUJBQStDO2lCQUFNO2dCQUNyRzs7OztpQkFBOEI7Z0JBQzlCLDBDQUFLLFNBQVMsRUFBQyxLQUFLLEVBQUMsdUJBQXVCLEVBQUUsWUFBWSxFQUFFLEFBQUMsR0FBRzthQUM5RCxDQUNSO1NBQ0w7OztXQWJDLFlBQVk7R0FBUyxtQkFBTSxTQUFTOztxQkFnQjNCLFlBQVkiLCJmaWxlIjoiL1VzZXJzL2RhbmllbC5vc2Jvcm5lL3JlcG9zL1JlYWN0LVNWRy1kb3VnaG51dC5naXRodWIuaW8vYXBwL2NvbXBvbmVudHMvaW5zdGFsbGF0aW9uL2luc3RhbGxhdGlvbi5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyBsYXJnZUV4YW1wbGUsIGV4YW1wbGUxIH0gZnJvbSAnLi9leGFtcGxlJztcblxuZnVuY3Rpb24gY3JlYXRlRXhhbXBlKCkge1xuICAgIHJldHVybiB7X19odG1sOiBleGFtcGxlMX07XG59O1xuXG5jbGFzcyBJbnN0YWxsYXRpb24gZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xuICAgIHJlbmRlcigpIHtcbiAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaW5zdGFsbGF0aW9uIGNvbnRhaW5lclwiPlxuICAgICAgICAgICAgICAgIDxoMz5JbnN0YWxsYXRpb248L2gzPlxuICAgICAgICAgICAgICAgIDxwPlJlYWN0IFNWRyBkb3VnaG51dCBjYW4gYmUgZG93bmxvYWRlZCB3aXRoIHlhcm46PC9wPlxuICAgICAgICAgICAgICAgIDxwcmUgY2xhc3NOYW1lPVwianN4XCI+PHNwYW4gY2xhc3NOYW1lPVwianN4X19jaGFyXCI+JCB5YXJuIGFkZCByZWFjdC1zdmctZG91Z2hudXQ8L3NwYW4+PC9wcmU+XG4gICAgICAgICAgICAgICAgPHA+T3IgdmlhIE5QTTo8L3A+XG4gICAgICAgICAgICAgICAgPHByZSBjbGFzc05hbWU9XCJqc3hcIj48c3BhbiBjbGFzc05hbWU9XCJqc3hfX2NoYXJcIj4kIG5wbSBpbnN0YWxsIHJlYWN0LXN2Zy1kb3VnaG51dCAtLXNhdmU8L3NwYW4+PC9wcmU+XG4gICAgICAgICAgICAgICAgPHA+RXhhbXBsZSBvZiBiYXNpYyBVc2FnZTo8L3A+XG4gICAgICAgICAgICAgICAgPHByZSBjbGFzc05hbWU9XCJqc3hcIiBkYW5nZXJvdXNseVNldElubmVySFRNTD17Y3JlYXRlRXhhbXBlKCl9IC8+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgKTtcbiAgICB9XG59XG5cbmV4cG9ydCBkZWZhdWx0IEluc3RhbGxhdGlvbjtcbiJdfQ==
-},{"./example":4,"react":39}],6:[function(require,module,exports){
+},{"./example":5,"react":40}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -480,7 +764,7 @@ var Intro = (function (_React$Component) {
 exports['default'] = Intro;
 module.exports = exports['default'];
 //# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9jb21wb25lbnRzL2ludHJvL2ludHJvLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7cUJBQXFCLE9BQU87Ozs7Z0NBQ0osb0JBQW9COzs7O0lBRXRDLEtBQUs7V0FBTCxLQUFLOztVQUFMLEtBQUs7d0JBQUwsS0FBSzs7NkJBQUwsS0FBSzs7O2NBQUwsS0FBSzs7U0FDSixrQkFBRztBQUNSLE9BQU0sUUFBUSxHQUFHO0FBQ2hCLFNBQUssRUFBRSxHQUFHO0FBQ1YsVUFBTSxFQUFFLFlBQVk7QUFDcEIsYUFBUyxFQUFFLFVBQVU7QUFDckIsUUFBSSxFQUFFLEdBQUc7QUFDVCxhQUFTLEVBQUUsRUFBRTtBQUNiLGlCQUFhLEVBQUUsU0FBUztBQUN4QixxQkFBaUIsRUFBRSxJQUFJO0lBQ3ZCLENBQUM7QUFDRixVQUNDOztNQUFLLFNBQVMsRUFBQyxPQUFPO0lBQ3JCOztPQUFJLFNBQVMsRUFBQyxRQUFROztLQUF3QjtJQUNsQzs7OztLQUE4Qyw0Q0FBTTs7S0FBa0M7SUFDdEYsZ0VBQWlCLFFBQVEsQ0FBRztJQUNuQyxDQUNMO0dBQ0Y7OztRQWxCSSxLQUFLO0dBQVMsbUJBQU0sU0FBUzs7QUFtQmxDLENBQUM7O3FCQUVhLEtBQUsiLCJmaWxlIjoiL1VzZXJzL2RhbmllbC5vc2Jvcm5lL3JlcG9zL1JlYWN0LVNWRy1kb3VnaG51dC5naXRodWIuaW8vYXBwL2NvbXBvbmVudHMvaW50cm8vaW50cm8uanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgICAgZnJvbSAncmVhY3QnO1xuaW1wb3J0IFN2Z0RvdWdobnV0IGZyb20gJ3JlYWN0LXN2Zy1kb3VnaG51dCc7XG5cbmNsYXNzIEludHJvIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcblx0cmVuZGVyKCkge1xuXHRcdGNvbnN0IHNldHRpbmdzID0ge1xuXHRcdFx0dmFsdWU6IDEwMCxcblx0XHRcdGZvcm1hdDogJ3BlcmNlbnRhZ2UnLFxuXHRcdFx0bGFiZWxUZXh0OiAnQXdlc29tZSEnLFxuXHRcdFx0c2l6ZTogMjAwLFxuXHRcdFx0dGhpY2tuZXNzOiAxNSxcblx0XHRcdHByaW1hcnlDb2xvdXI6ICcjMjk4MEI5Jyxcblx0XHRcdGFuaW1hdGlvbkR1cmF0aW9uOiAxMDAwXG5cdFx0fTtcblx0XHRyZXR1cm4oXG5cdFx0XHQ8ZGl2IGNsYXNzTmFtZT1cImludHJvXCI+XG5cdFx0XHRcdDxoMSBjbGFzc05hbWU9XCJzYXJpbmFcIj5SZWFjdCBTVkcgRG91Z2hudXQ8L2gxPlxuICAgICAgICAgICAgICAgIDxwPkEgZmxleGlibGUsIGxpZ2h0d2VpZ2h0IFJlYWN0IGNvbXBvbmVudCBmb3I8YnIgLz5TVkcgZG91Z2hudXQgY2hhcnRzIG1hZGUgZWFzeSE8L3A+XG4gICAgICAgICAgICAgICAgPFN2Z0RvdWdobnV0IHsuLi5zZXR0aW5nc30vPlxuXHRcdFx0PC9kaXY+XG5cdFx0KTtcblx0fVxufTtcblxuZXhwb3J0IGRlZmF1bHQgSW50cm87XG4iXX0=
-},{"react":39,"react-svg-doughnut":30}],7:[function(require,module,exports){
+},{"react":40,"react-svg-doughnut":31}],8:[function(require,module,exports){
 'use strict';
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -513,6 +797,10 @@ var _componentsConfigurationConfiguration = require('./components/configuration/
 
 var _componentsConfigurationConfiguration2 = _interopRequireDefault(_componentsConfigurationConfiguration);
 
+var _componentsBuilderBuilder = require('./components/builder/builder');
+
+var _componentsBuilderBuilder2 = _interopRequireDefault(_componentsBuilderBuilder);
+
 var _componentsFooterFooter = require('./components/footer/footer');
 
 var _componentsFooterFooter2 = _interopRequireDefault(_componentsFooterFooter);
@@ -535,6 +823,7 @@ var App = (function (_React$Component) {
 				_react2['default'].createElement(_componentsIntroIntro2['default'], null),
 				_react2['default'].createElement(_componentsInstallationInstallation2['default'], null),
 				_react2['default'].createElement(_componentsConfigurationConfiguration2['default'], null),
+				_react2['default'].createElement(_componentsBuilderBuilder2['default'], null),
 				_react2['default'].createElement(_componentsFooterFooter2['default'], null)
 			);
 		}
@@ -546,8 +835,8 @@ var App = (function (_React$Component) {
 ;
 
 _reactDom2['default'].render(_react2['default'].createElement(App, null), document.getElementById('rsvgd-app'));
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9mYWtlXzQxZGExMWI4LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7OztxQkFBcUIsT0FBTzs7Ozt3QkFDUCxXQUFXOzs7O29DQUNkLDBCQUEwQjs7OztrREFDbkIsd0NBQXdDOzs7O29EQUN2QywwQ0FBMEM7Ozs7c0NBQ2pELDRCQUE0Qjs7OztJQUV6QyxHQUFHO1dBQUgsR0FBRzs7VUFBSCxHQUFHO3dCQUFILEdBQUc7OzZCQUFILEdBQUc7OztjQUFILEdBQUc7O1NBQ0Ysa0JBQUc7QUFDUixVQUNDOzs7SUFDYSx5RUFBUztJQUNyQix1RkFBZ0I7SUFDaEIseUZBQWlCO0lBQ2pCLDJFQUFVO0lBQ0wsQ0FDTDtHQUNGOzs7UUFWSSxHQUFHO0dBQVMsbUJBQU0sU0FBUzs7QUFXaEMsQ0FBQzs7QUFFRixzQkFBUyxNQUFNLENBQ2QsaUNBQUMsR0FBRyxPQUFHLEVBQ1AsUUFBUSxDQUFDLGNBQWMsQ0FBQyxXQUFXLENBQUMsQ0FDcEMsQ0FBQyIsImZpbGUiOiIvVXNlcnMvZGFuaWVsLm9zYm9ybmUvcmVwb3MvUmVhY3QtU1ZHLWRvdWdobnV0LmdpdGh1Yi5pby9hcHAvZmFrZV80MWRhMTFiOC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCAgICBmcm9tICdyZWFjdCc7XG5pbXBvcnQgUmVhY3RET00gZnJvbSAncmVhY3QtZG9tJztcbmltcG9ydCBJbnRybyBmcm9tICcuL2NvbXBvbmVudHMvaW50cm8vaW50cm8nO1xuaW1wb3J0IEluc3RhbGxhdGlvbiBmcm9tICcuL2NvbXBvbmVudHMvaW5zdGFsbGF0aW9uL2luc3RhbGxhdGlvbic7XG5pbXBvcnQgQ29uZmlndXJhdGlvbiBmcm9tICcuL2NvbXBvbmVudHMvY29uZmlndXJhdGlvbi9jb25maWd1cmF0aW9uJztcbmltcG9ydCBGb290ZXIgZnJvbSAnLi9jb21wb25lbnRzL2Zvb3Rlci9mb290ZXInO1xuXG5jbGFzcyBBcHAgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xuXHRyZW5kZXIoKSB7XG5cdFx0cmV0dXJuKFxuXHRcdFx0PGRpdj5cbiAgICAgICAgICAgICAgICA8SW50cm8gLz5cblx0XHRcdFx0PEluc3RhbGxhdGlvbiAvPlxuXHRcdFx0XHQ8Q29uZmlndXJhdGlvbiAvPlxuXHRcdFx0XHQ8Rm9vdGVyIC8+XG5cdFx0XHQ8L2Rpdj5cblx0XHQpO1xuXHR9XG59O1xuXG5SZWFjdERPTS5yZW5kZXIoXG5cdDxBcHAgLz4sXG5cdGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdyc3ZnZC1hcHAnKVxuKTtcbiJdfQ==
-},{"./components/configuration/configuration":1,"./components/footer/footer":3,"./components/installation/installation":5,"./components/intro/intro":6,"react":39,"react-dom":28}],8:[function(require,module,exports){
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kYW5pZWwub3Nib3JuZS9yZXBvcy9SZWFjdC1TVkctZG91Z2hudXQuZ2l0aHViLmlvL2FwcC9mYWtlX2JjZjk1MWQuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7O3FCQUFxQixPQUFPOzs7O3dCQUNQLFdBQVc7Ozs7b0NBQ2QsMEJBQTBCOzs7O2tEQUNuQix3Q0FBd0M7Ozs7b0RBQ3ZDLDBDQUEwQzs7Ozt3Q0FDaEQsOEJBQThCOzs7O3NDQUMvQiw0QkFBNEI7Ozs7SUFFekMsR0FBRztXQUFILEdBQUc7O1VBQUgsR0FBRzt3QkFBSCxHQUFHOzs2QkFBSCxHQUFHOzs7Y0FBSCxHQUFHOztTQUNGLGtCQUFHO0FBQ1IsVUFDQzs7O0lBQ2EseUVBQVM7SUFDckIsdUZBQWdCO0lBQ2hCLHlGQUFpQjtJQUNqQiw2RUFBVztJQUNYLDJFQUFVO0lBQ0wsQ0FDTDtHQUNGOzs7UUFYSSxHQUFHO0dBQVMsbUJBQU0sU0FBUzs7QUFZaEMsQ0FBQzs7QUFFRixzQkFBUyxNQUFNLENBQ2QsaUNBQUMsR0FBRyxPQUFHLEVBQ1AsUUFBUSxDQUFDLGNBQWMsQ0FBQyxXQUFXLENBQUMsQ0FDcEMsQ0FBQyIsImZpbGUiOiIvVXNlcnMvZGFuaWVsLm9zYm9ybmUvcmVwb3MvUmVhY3QtU1ZHLWRvdWdobnV0LmdpdGh1Yi5pby9hcHAvZmFrZV9iY2Y5NTFkLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0ICAgIGZyb20gJ3JlYWN0JztcbmltcG9ydCBSZWFjdERPTSBmcm9tICdyZWFjdC1kb20nO1xuaW1wb3J0IEludHJvIGZyb20gJy4vY29tcG9uZW50cy9pbnRyby9pbnRybyc7XG5pbXBvcnQgSW5zdGFsbGF0aW9uIGZyb20gJy4vY29tcG9uZW50cy9pbnN0YWxsYXRpb24vaW5zdGFsbGF0aW9uJztcbmltcG9ydCBDb25maWd1cmF0aW9uIGZyb20gJy4vY29tcG9uZW50cy9jb25maWd1cmF0aW9uL2NvbmZpZ3VyYXRpb24nO1xuaW1wb3J0IEJ1aWxkZXIgZnJvbSAnLi9jb21wb25lbnRzL2J1aWxkZXIvYnVpbGRlcic7XG5pbXBvcnQgRm9vdGVyIGZyb20gJy4vY29tcG9uZW50cy9mb290ZXIvZm9vdGVyJztcblxuY2xhc3MgQXBwIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcblx0cmVuZGVyKCkge1xuXHRcdHJldHVybihcblx0XHRcdDxkaXY+XG4gICAgICAgICAgICAgICAgPEludHJvIC8+XG5cdFx0XHRcdDxJbnN0YWxsYXRpb24gLz5cblx0XHRcdFx0PENvbmZpZ3VyYXRpb24gLz5cblx0XHRcdFx0PEJ1aWxkZXIgLz5cblx0XHRcdFx0PEZvb3RlciAvPlxuXHRcdFx0PC9kaXY+XG5cdFx0KTtcblx0fVxufTtcblxuUmVhY3RET00ucmVuZGVyKFxuXHQ8QXBwIC8+LFxuXHRkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncnN2Z2QtYXBwJylcbik7XG4iXX0=
+},{"./components/builder/builder":1,"./components/configuration/configuration":2,"./components/footer/footer":4,"./components/installation/installation":6,"./components/intro/intro":7,"react":40,"react-dom":29}],9:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -581,7 +870,7 @@ var ExecutionEnvironment = {
 };
 
 module.exports = ExecutionEnvironment;
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 "use strict";
 
 /**
@@ -611,7 +900,7 @@ function camelize(string) {
 }
 
 module.exports = camelize;
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -649,7 +938,7 @@ function camelizeStyleName(string) {
 }
 
 module.exports = camelizeStyleName;
-},{"./camelize":9}],11:[function(require,module,exports){
+},{"./camelize":10}],12:[function(require,module,exports){
 'use strict';
 
 /**
@@ -687,7 +976,7 @@ function containsNode(outerNode, innerNode) {
 }
 
 module.exports = containsNode;
-},{"./isTextNode":19}],12:[function(require,module,exports){
+},{"./isTextNode":20}],13:[function(require,module,exports){
 "use strict";
 
 /**
@@ -724,7 +1013,7 @@ emptyFunction.thatReturnsArgument = function (arg) {
 };
 
 module.exports = emptyFunction;
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -744,7 +1033,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = emptyObject;
 }).call(this,require("7YKIPe"))
-},{"7YKIPe":22}],14:[function(require,module,exports){
+},{"7YKIPe":23}],15:[function(require,module,exports){
 'use strict';
 
 /**
@@ -781,7 +1070,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 }
 
 module.exports = getActiveElement;
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 'use strict';
 
 /**
@@ -812,7 +1101,7 @@ function hyphenate(string) {
 }
 
 module.exports = hyphenate;
-},{}],16:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -849,7 +1138,7 @@ function hyphenateStyleName(string) {
 }
 
 module.exports = hyphenateStyleName;
-},{"./hyphenate":15}],17:[function(require,module,exports){
+},{"./hyphenate":16}],18:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -905,7 +1194,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 
 module.exports = invariant;
 }).call(this,require("7YKIPe"))
-},{"7YKIPe":22}],18:[function(require,module,exports){
+},{"7YKIPe":23}],19:[function(require,module,exports){
 'use strict';
 
 /**
@@ -928,7 +1217,7 @@ function isNode(object) {
 }
 
 module.exports = isNode;
-},{}],19:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 'use strict';
 
 /**
@@ -951,7 +1240,7 @@ function isTextNode(object) {
 }
 
 module.exports = isTextNode;
-},{"./isNode":18}],20:[function(require,module,exports){
+},{"./isNode":19}],21:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1017,7 +1306,7 @@ function shallowEqual(objA, objB) {
 }
 
 module.exports = shallowEqual;
-},{}],21:[function(require,module,exports){
+},{}],22:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
@@ -1082,7 +1371,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = warning;
 }).call(this,require("7YKIPe"))
-},{"./emptyFunction":12,"7YKIPe":22}],22:[function(require,module,exports){
+},{"./emptyFunction":13,"7YKIPe":23}],23:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -1147,7 +1436,7 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 
-},{}],23:[function(require,module,exports){
+},{}],24:[function(require,module,exports){
 /*
 object-assign
 (c) Sindre Sorhus
@@ -1239,7 +1528,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 	return to;
 };
 
-},{}],24:[function(require,module,exports){
+},{}],25:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -1302,7 +1591,7 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
 module.exports = checkPropTypes;
 
 }).call(this,require("7YKIPe"))
-},{"./lib/ReactPropTypesSecret":25,"7YKIPe":22,"fbjs/lib/invariant":17,"fbjs/lib/warning":21}],25:[function(require,module,exports){
+},{"./lib/ReactPropTypesSecret":26,"7YKIPe":23,"fbjs/lib/invariant":18,"fbjs/lib/warning":22}],26:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1316,7 +1605,7 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
 
-},{}],26:[function(require,module,exports){
+},{}],27:[function(require,module,exports){
 (function (process){
 /** @license React v16.4.0
  * react-dom.development.js
@@ -18626,7 +18915,7 @@ module.exports = reactDom;
 }
 
 }).call(this,require("7YKIPe"))
-},{"7YKIPe":22,"fbjs/lib/ExecutionEnvironment":8,"fbjs/lib/camelizeStyleName":10,"fbjs/lib/containsNode":11,"fbjs/lib/emptyFunction":12,"fbjs/lib/emptyObject":13,"fbjs/lib/getActiveElement":14,"fbjs/lib/hyphenateStyleName":16,"fbjs/lib/invariant":17,"fbjs/lib/shallowEqual":20,"fbjs/lib/warning":21,"object-assign":23,"prop-types/checkPropTypes":24,"react":39}],27:[function(require,module,exports){
+},{"7YKIPe":23,"fbjs/lib/ExecutionEnvironment":9,"fbjs/lib/camelizeStyleName":11,"fbjs/lib/containsNode":12,"fbjs/lib/emptyFunction":13,"fbjs/lib/emptyObject":14,"fbjs/lib/getActiveElement":15,"fbjs/lib/hyphenateStyleName":17,"fbjs/lib/invariant":18,"fbjs/lib/shallowEqual":21,"fbjs/lib/warning":22,"object-assign":24,"prop-types/checkPropTypes":25,"react":40}],28:[function(require,module,exports){
 /** @license React v16.4.0
  * react-dom.production.min.js
  *
@@ -18866,7 +19155,7 @@ var qi={createPortal:pi,findDOMNode:function(a){return null==a?null:1===a.nodeTy
 arguments)},unstable_batchedUpdates:Yh,unstable_deferredUpdates:Dh,flushSync:$h,unstable_flushControlled:ai,__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED:{EventPluginHub:Ka,EventPluginRegistry:va,EventPropagators:$a,ReactControlledComponent:Rb,ReactDOMComponentTree:Qa,ReactDOMEventListener:Md},unstable_createRoot:function(a,b){return new li(a,!0,null!=b&&!0===b.hydrate)}};fi({findFiberByHostInstance:Na,bundleType:0,version:"16.4.0",rendererPackageName:"react-dom"});
 var vi={default:qi},wi=vi&&qi||vi;module.exports=wi.default?wi.default:wi;
 
-},{"fbjs/lib/ExecutionEnvironment":8,"fbjs/lib/containsNode":11,"fbjs/lib/emptyFunction":12,"fbjs/lib/emptyObject":13,"fbjs/lib/getActiveElement":14,"fbjs/lib/invariant":17,"fbjs/lib/shallowEqual":20,"object-assign":23,"react":39}],28:[function(require,module,exports){
+},{"fbjs/lib/ExecutionEnvironment":9,"fbjs/lib/containsNode":12,"fbjs/lib/emptyFunction":13,"fbjs/lib/emptyObject":14,"fbjs/lib/getActiveElement":15,"fbjs/lib/invariant":18,"fbjs/lib/shallowEqual":21,"object-assign":24,"react":40}],29:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -18908,7 +19197,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 }).call(this,require("7YKIPe"))
-},{"./cjs/react-dom.development.js":26,"./cjs/react-dom.production.min.js":27,"7YKIPe":22}],29:[function(require,module,exports){
+},{"./cjs/react-dom.development.js":27,"./cjs/react-dom.production.min.js":28,"7YKIPe":23}],30:[function(require,module,exports){
 module.exports={
   "_args": [
     [
@@ -18925,13 +19214,13 @@ module.exports={
     ]
   ],
   "_from": "react-svg-doughnut@latest",
-  "_id": "react-svg-doughnut@3.0.0",
+  "_id": "react-svg-doughnut@3.2.0",
   "_inCache": true,
   "_location": "/react-svg-doughnut",
   "_nodeVersion": "10.4.1",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/react-svg-doughnut_3.0.0_1530617466800_0.8246659484181098"
+    "tmp": "tmp/react-svg-doughnut_3.2.0_1530628268698_0.022703199349187075"
   },
   "_npmUser": {
     "name": "dannyoz",
@@ -18952,8 +19241,8 @@ module.exports={
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/react-svg-doughnut/-/react-svg-doughnut-3.0.0.tgz",
-  "_shasum": "cc0ae27dbddf8e70bf8fa79b33ee0c6f3b30a7e8",
+  "_resolved": "https://registry.npmjs.org/react-svg-doughnut/-/react-svg-doughnut-3.2.0.tgz",
+  "_shasum": "db86f671e5e0193542c49346444f85d6d6ed222f",
   "_shrinkwrap": null,
   "_spec": "react-svg-doughnut",
   "_where": "/Users/daniel.osborne/repos/React-SVG-doughnut.github.io",
@@ -18991,12 +19280,12 @@ module.exports={
   },
   "directories": {},
   "dist": {
-    "shasum": "cc0ae27dbddf8e70bf8fa79b33ee0c6f3b30a7e8",
-    "tarball": "https://registry.npmjs.org/react-svg-doughnut/-/react-svg-doughnut-3.0.0.tgz",
+    "shasum": "db86f671e5e0193542c49346444f85d6d6ed222f",
+    "tarball": "https://registry.npmjs.org/react-svg-doughnut/-/react-svg-doughnut-3.2.0.tgz",
     "fileCount": 18,
-    "unpackedSize": 19490
+    "unpackedSize": 20287
   },
-  "gitHead": "52d9cabc9aaab03f078360b754da8c3642a8c95b",
+  "gitHead": "20358118abc86968e9c4dd35900419e80ce9376b",
   "homepage": "https://github.com/dannyoz/react-svg-doughnut#readme",
   "keywords": [
     "React",
@@ -19020,10 +19309,10 @@ module.exports={
   "scripts": {
     "test": "jest"
   },
-  "version": "3.0.0"
+  "version": "3.2.0"
 }
 
-},{}],30:[function(require,module,exports){
+},{}],31:[function(require,module,exports){
 const React = require('react');
 const calculatePathShape = require('./utils/calculate-path-shape');
 const configure = require('./utils/configure');
@@ -19035,56 +19324,70 @@ class SvgDoughnut extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            appliedPercentage: 0,
-            display: 0
-        };
         this.settings = configure(this.props);
         this.percentage = calculatePercentage(this.settings);
+        this.state = {
+            appliedPercentage: 0,
+            display: 0,
+            settings: this.settings,
+            percentage: this.percentage
+        };
     }
 
     componentDidMount() {
-        if (this.settings.animationDuration || this.settings.animationDuration > 0) {
+        if (this.state.settings.animationDuration || this.state.settings.animationDuration > 0) {
             this.animate();
         } else {
             this.setState({
-                appliedPercentage: this.percentage,
-                display: format(this.settings, this.percentage)
+                appliedPercentage: this.state.percentage,
+                display: format(this.state.settings, this.state.percentage)
             });
         }
     }
 
+    componentWillReceiveProps(props) {
+        const settings = configure(props);
+        const percentage = calculatePercentage(settings);
+        this.setState({
+            appliedPercentage: percentage,
+            display: format(settings, percentage),
+            settings,
+            percentage
+        });
+    }
+
     animate() {
         const self = this;
-        for(let index = 0; index < (this.percentage + 1); index ++){
+        for(let index = 0; index < (this.state.percentage + 1); index ++){
             setTimeout(() => {
                 self.setState({
                     appliedPercentage: index,
-                    display: format(this.settings, index)
+                    display: format(this.state.settings, index)
                 });
-            }, index * stepDuration(this.percentage, this.settings.animationDuration));
+            }, index * stepDuration(this.state.percentage, this.state.settings.animationDuration));
         };
     }
 
     render() {
+        const settings = this.state.settings;
         return(
-            React.createElement("div", {className: "react-svg-doughnut", style: Object.assign({}, this.settings.styles.svgStyle, {position: 'relative'})}, 
-                React.createElement("svg", {viewBox: `0 0 ${this.settings.size} ${this.settings.size}`}, 
+            React.createElement("div", {className: "react-svg-doughnut", style: Object.assign({}, settings.styles.svgStyle, {position: 'relative'})}, 
+                React.createElement("svg", {viewBox: `0 0 ${settings.size} ${settings.size}`}, 
                     React.createElement("circle", {
                         cx: "50%", 
                         cy: "50%", 
-                        r: (this.settings.size / 2) - this.settings.thickness, 
-                        style: Object.assign({}, this.settings.styles.sharedStyles , this.settings.styles.circleStyle)}
+                        r: (settings.size / 2) - settings.thickness, 
+                        style: Object.assign({}, settings.styles.sharedStyles , settings.styles.circleStyle)}
                     ), 
                     React.createElement("path", {
-                        d: calculatePathShape(this.state.appliedPercentage, this.settings.size, this.settings.thickness), 
-                        style: Object.assign({}, this.settings.styles.sharedStyles , this.settings.styles.pathStyle)}
+                        d: calculatePathShape(this.state.appliedPercentage, settings.size, settings.thickness), 
+                        style: Object.assign({}, settings.styles.sharedStyles , settings.styles.pathStyle)}
                     )
                 ), 
-                React.createElement("div", {style: Object.assign({}, this.settings.styles.textWrapperStyle)}, 
-                    (this.settings.labelText && this.settings.labelPosition === 'top') && React.createElement("p", {style: Object.assign({}, this.settings.styles.labelTextStyle)}, this.settings.labelText), 
-                    React.createElement("p", {style: Object.assign({}, this.settings.styles.percentageTextStyle)}, `${this.state.display}`), 
-                    (this.settings.labelText && this.settings.labelPosition === 'bottom') && React.createElement("p", {style: Object.assign({}, this.settings.styles.labelTextStyle)}, this.settings.labelText)
+                React.createElement("div", {style: Object.assign({}, settings.styles.textWrapperStyle)}, 
+                    (settings.labelText && settings.labelPosition === 'top') && React.createElement("p", {style: Object.assign({}, settings.styles.labelTextStyle)}, settings.labelText), 
+                    React.createElement("p", {style: Object.assign({}, settings.styles.percentageTextStyle)}, `${this.state.display}`), 
+                    (settings.labelText && settings.labelPosition === 'bottom') && React.createElement("p", {style: Object.assign({}, settings.styles.labelTextStyle)}, settings.labelText)
                 )
             )
         );
@@ -19093,7 +19396,7 @@ class SvgDoughnut extends React.Component {
 
 module.exports = SvgDoughnut;
 
-},{"./utils/calculate-path-shape":31,"./utils/calculate-percentage":32,"./utils/configure":33,"./utils/format":34,"./utils/step-duration":36,"react":39}],31:[function(require,module,exports){
+},{"./utils/calculate-path-shape":32,"./utils/calculate-percentage":33,"./utils/configure":34,"./utils/format":35,"./utils/step-duration":37,"react":40}],32:[function(require,module,exports){
 module.exports = (percentage, size, thickness) => {
     const PI = Math.PI;
     const cos = Math.cos;
@@ -19120,14 +19423,14 @@ module.exports = (percentage, size, thickness) => {
     return String(attrString);
 }
 
-},{}],32:[function(require,module,exports){
+},{}],33:[function(require,module,exports){
 module.exports = (settings) => {
     const value = settings.value || 0;
     const ceiling = settings.ceiling || 100;
     return ( value / ceiling ) * 100;
 }
 
-},{}],33:[function(require,module,exports){
+},{}],34:[function(require,module,exports){
 const generateStyles = require('./generate-styles');
 const defaults = {
     size: 150,
@@ -19151,25 +19454,25 @@ module.exports = (settings = defaults) => {
     };
 };
 
-},{"./generate-styles":35}],34:[function(require,module,exports){
+},{"./generate-styles":36}],35:[function(require,module,exports){
 module.exports = (settings, val) => {
     const format = settings.format;
     let display;
     switch (format) {
         case 'percentage':
-            display = `${val}%`
+            display = `${Math.round(val)}%`
             break;
         case 'fraction':
             display = `${settings.value} / ${settings.ceiling}`
             break;
         default:
-            display = `${val}%`
+            display = `${Math.round(val)}%`
     }
 
     return display;
 }
 
-},{}],35:[function(require,module,exports){
+},{}],36:[function(require,module,exports){
 module.exports = (settings) => {
 	return {
 		svgStyle: {
@@ -19209,12 +19512,12 @@ module.exports = (settings) => {
 	};
 }
 
-},{}],36:[function(require,module,exports){
+},{}],37:[function(require,module,exports){
 module.exports = (percentage, duration) => {
 	return duration / percentage;
 };
 
-},{}],37:[function(require,module,exports){
+},{}],38:[function(require,module,exports){
 (function (process){
 /** @license React v16.4.0
  * react.development.js
@@ -20692,7 +20995,7 @@ module.exports = react;
 }
 
 }).call(this,require("7YKIPe"))
-},{"7YKIPe":22,"fbjs/lib/emptyFunction":12,"fbjs/lib/emptyObject":13,"fbjs/lib/invariant":17,"fbjs/lib/warning":21,"object-assign":23,"prop-types/checkPropTypes":24}],38:[function(require,module,exports){
+},{"7YKIPe":23,"fbjs/lib/emptyFunction":13,"fbjs/lib/emptyObject":14,"fbjs/lib/invariant":18,"fbjs/lib/warning":22,"object-assign":24,"prop-types/checkPropTypes":25}],39:[function(require,module,exports){
 /** @license React v16.4.0
  * react.production.min.js
  *
@@ -20716,7 +21019,7 @@ _calculateChangedBits:b,_defaultValue:a,_currentValue:a,_currentValue2:a,_change
 b.key&&(g=""+b.key);var l=void 0;a.type&&a.type.defaultProps&&(l=a.type.defaultProps);for(c in b)K.call(b,c)&&!L.hasOwnProperty(c)&&(d[c]=void 0===b[c]&&void 0!==l?l[c]:b[c])}c=arguments.length-2;if(1===c)d.children=e;else if(1<c){l=Array(c);for(var m=0;m<c;m++)l[m]=arguments[m+2];d.children=l}return{$$typeof:t,type:a.type,key:g,ref:h,props:d,_owner:f}},createFactory:function(a){var b=M.bind(null,a);b.type=a;return b},isValidElement:N,version:"16.4.0",__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED:{ReactCurrentOwner:J,
 assign:k}},Y={default:X},Z=Y&&X||Y;module.exports=Z.default?Z.default:Z;
 
-},{"fbjs/lib/emptyFunction":12,"fbjs/lib/emptyObject":13,"fbjs/lib/invariant":17,"object-assign":23}],39:[function(require,module,exports){
+},{"fbjs/lib/emptyFunction":13,"fbjs/lib/emptyObject":14,"fbjs/lib/invariant":18,"object-assign":24}],40:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -20727,4 +21030,4 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 }).call(this,require("7YKIPe"))
-},{"./cjs/react.development.js":37,"./cjs/react.production.min.js":38,"7YKIPe":22}]},{},[7])
+},{"./cjs/react.development.js":38,"./cjs/react.production.min.js":39,"7YKIPe":23}]},{},[8])

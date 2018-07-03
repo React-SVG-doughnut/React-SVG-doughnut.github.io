@@ -1,0 +1,25 @@
+.builder {
+    margin-top: 2rem;
+
+    &__setting {
+        display: flex;
+        padding: 0.3rem 0;
+
+        label {
+            font-weight: bold;
+            flex-basis: 10rem;
+        }
+
+        input, select {
+            flex-basis: 10rem;
+        }
+    }
+
+    &__preview {
+        position: relative;
+
+        .react-svg-doughnut {
+            @include centre(x);
+        }
+    }
+}

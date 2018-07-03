@@ -2,6 +2,7 @@
 @import url("https://use.typekit.net/hfs7ihd.css");
 @include normalise;
 @include containerClass(1000px);
+@include flexGrid;
 
 $primary: $col-belize-hole;
 
@@ -29,3 +30,4 @@ strong {
 @import "./components/installation/installation";
 @import "./components/configuration/configuration";
 @import "./components/footer/footer";
+@import "./components/builder/builder";

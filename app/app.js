@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Intro from './components/intro/intro';
 import Installation from './components/installation/installation';
 import Configuration from './components/configuration/configuration';
+import Builder from './components/builder/builder';
 import Footer from './components/footer/footer';
 
 class App extends React.Component {
@@ -12,6 +13,7 @@ class App extends React.Component {
                 <Intro />
 				<Installation />
 				<Configuration />
+				<Builder />
 				<Footer />
 			</div>
 		);
