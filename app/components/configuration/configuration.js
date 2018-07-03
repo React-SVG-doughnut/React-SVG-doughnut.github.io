@@ -6,11 +6,7 @@ class Configuration extends React.Component {
         return (
             <div className="configuration container">
                 <h3>Configuration</h3>
-                <p>React SVG doughnut uses two props to build the graphic.</p>
-                <h6>Percentage (Number)</h6>
-                <p>The percentage displayed in the center and generating the completed section of the graphic. Note: This prop is optional, percentage can also be set in the settings object - see below.</p>
-                <h6>Settings (Object)</h6>
-                <p>An optional object used to configure the following default settings:</p>
+                <p>React SVG doughnut uses the following props to build the graphic.</p>
                 <div className="flex-grid-row configuration__table-row">
                     <div className="flex-grid-col-4 configuration__table-cell"><p><strong>Setting</strong></p></div>
                     <div className="flex-grid-col-2 configuration__table-cell"><p><strong>Type</strong></p></div>
