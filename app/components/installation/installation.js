@@ -1,5 +1,5 @@
 import React from 'react';
-import { largeExample, example1 } from './example';
+import { example1 } from './example';
 
 function createExampe() {
     return {__html: example1};

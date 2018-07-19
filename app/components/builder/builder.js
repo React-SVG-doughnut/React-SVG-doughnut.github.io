@@ -1,5 +1,6 @@
 import React from 'react';
 import SvgDoughnut from 'react-svg-doughnut';
+import BuilderCode from './builderCode';
 
 class Builder extends React.Component {
     constructor(props) {
@@ -43,36 +44,46 @@ class Builder extends React.Component {
                             </select>
                         </div>
                         <div className="builder__setting">
-                            <label>Value:</label><input type="range" value={this.state.value} onChange={this.changeSetting.bind(this, 'value')} min="0" max={this.state.ceiling}/>
+                            <label>Value:</label>
+                            <input type="range" value={this.state.value} onChange={this.changeSetting.bind(this, 'value')} min="0" max={this.state.ceiling}/>
                         </div>
                         {this.state.format === 'fraction' && 
                             <div className="builder__setting">
-                                <label>Ceiling:</label><input type="range" value={this.state.ceiling} onChange={this.changeSetting.bind(this, 'ceiling')} min="1" max="500"/>
+                                <label>Ceiling:</label>
+                                <input type="range" value={this.state.ceiling} onChange={this.changeSetting.bind(this, 'ceiling')} min="1" max="500"/>
                             </div>
                         }
                         <div className="builder__setting">
-                            <label>Size:</label><input type="range" value={this.state.size} onChange={this.changeSetting.bind(this, 'size')} min="100" max="500"/>
+                            <label>Size:</label>
+                            <input type="range" value={this.state.size} onChange={this.changeSetting.bind(this, 'size')} min="100" max="500"/>
                         </div>
                         <div className="builder__setting">
-                            <label>Thickness:</label><input type="range" value={this.state.thickness} onChange={this.changeSetting.bind(this, 'thickness')} min="3" max="50"/>
+                            <label>Thickness:</label>
+                            <input type="range" value={this.state.thickness} onChange={this.changeSetting.bind(this, 'thickness')} min="3" max="50"/>
                         </div>
                         <div className="builder__setting">
-                            <label>Value font size:</label><input type="range" value={this.state.percentageFontSize} onChange={this.changeSetting.bind(this, 'percentageFontSize')} min="10" max="100"/>
+                            <label>Value font size:</label>
+                            <input type="range" value={this.state.percentageFontSize} onChange={this.changeSetting.bind(this, 'percentageFontSize')} min="10" max="100"/>
                         </div>
                         <div className="builder__setting">
-                            <label>Label font size:</label><input type="range" value={this.state.labelFontSize} onChange={this.changeSetting.bind(this, 'labelFontSize')} min="10" max="100"/>
+                            <label>Label font size:</label>
+                            <input type="range" value={this.state.labelFontSize} onChange={this.changeSetting.bind(this, 'labelFontSize')} min="10" max="100"/>
                         </div>
                         <div className="builder__setting">
-                            <label>Primary colour:</label><input type="color" value={this.state.primaryColour} onChange={this.changeSetting.bind(this, 'primaryColour')}/>
+                            <label>Primary colour:</label>
+                            <input type="color" value={this.state.primaryColour} onChange={this.changeSetting.bind(this, 'primaryColour')}/>
                         </div>
                         <div className="builder__setting">
-                            <label>Ring colour:</label><input type="color" value={this.state.ringColour} onChange={this.changeSetting.bind(this, 'ringColour')}/>
+                            <label>Ring colour:</label>
+                            <input type="color" value={this.state.ringColour} onChange={this.changeSetting.bind(this, 'ringColour')}/>
                         </div>
                         <div className="builder__setting">
-                            <label>Label colour:</label><input type="color" value={this.state.labelColour} onChange={this.changeSetting.bind(this, 'labelColour')}/>
+                            <label>Label colour:</label>
+                            <input type="color" value={this.state.labelColour} onChange={this.changeSetting.bind(this, 'labelColour')}/>
                         </div>
                         <div className="builder__setting">
-                            <label>Label text:</label><input type="text" value={this.state.labelText} onChange={this.changeSetting.bind(this, 'labelText')}/>
+                            <label>Label text:</label>
+                            <input type="text" value={this.state.labelText} onChange={this.changeSetting.bind(this, 'labelText')}/>
                         </div>
                         <div className="builder__setting">
                             <label>Label position:</label>
@@ -100,6 +111,7 @@ class Builder extends React.Component {
                         <SvgDoughnut {...this.state} />
                     </div>
                 </div>
+                <BuilderCode {...this.state}/>
             </div>
         );
     }
